@@ -1,0 +1,63 @@
+//@import "_style.scss";
+//@import "_reset.scss";
+
+
+@mixin bg-gradient($deg, $color_1, $color_2){
+	background: -webkit-linear-gradient($deg, $color_1, $color_2);
+	background:    -moz-linear-gradient($deg, $color_1, $color_2);
+	background: 	 -o-linear-gradient($deg, $color_1, $color_2);
+	background: 		linear-gradient($deg, $color_1, $color_2);
+}
+
+body {
+	
+}
+header {
+	
+}
+
+
+footer{
+	
+}
+.container {
+	a.effect {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		color: #aaa;
+		text-decoration: none;
+		cursor: pointer;  /*滑鼠滑過時會變成手指頭*/
+		border: 1px solid #000;
+		height: 2.8em;
+		width: 10em;
+		padding: 0;
+		outline: none;
+		overflow: hidden; /*超出你設定的長寬的東西都會被隱藏*/
+		span {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			border-radius: 50%; /*將方型變成一個圓形*/
+			display: block;
+			width: 20em;
+			height: 20em;
+			line-height: 20em; /*行高設為與高度一樣20em，形成文字垂直置中*/
+			left: -5em;
+			text-align: center; /*span中的自置中*/
+			-webkit-transition: box-shadow 0.5s ease-out, color 0.3s 0.1s ease-out;
+			        transition: box-shadow 0.5s ease-out, color 0.3s 0.1s ease-out;
+			/*設定box-shadow transition特效*/
+			&:hover {
+				color: #fff;
+  				box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.8);
+			}
+		}
+	}
+}
