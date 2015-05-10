@@ -19,10 +19,24 @@
 	<header>
 		
 	</header>
-	<div class="container">
-		<a href="" title="" class="effect">
-			<span>mhjg</span>
-		</a>
+	<div class="container">	
+		<article class="labs web">
+			<section class="components button">
+				<a href="" title="" class="btn ripple_1">
+					<span>mhjg</span>
+				</a>
+			</section>
+			<section class="components box">
+				<div class="test_1">
+					
+				</div>
+			</section>
+		</article>
+		<article class="labs photo">
+			<section class="">
+				
+			</section>
+		</article>
 	</div>
 	<footer>
 		
@@ -30,6 +44,57 @@
 </body>
 <!--JS-->
 <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+<script>
 
+	function aa( ){
+		var name = 'aaaaa';
+
+		function abbb(){
+			//var name="bbbbb";
+			//alert(name);
+		}
+		//abbb()
+		return abbb;
+	}
+	//aa();
+	var A_A = aa();//閉包是一種特殊的物件，其中結合了兩樣東西︰函數，和函數所建立的環境。
+	A_A()
+	///////////////////////
+	function em(){
+		var msg='refe';
+		this.ele = null;
+		this.msg = msg;
+		this.click = function(){
+			alert(this.msg)
+		}
+	}
+	var EM = new em();
+	//alert(typeof EM)// object
+	alert(EM.click)
+
+	/////////////////////
+	var global = new GLOBAL();
+	function GLOBAL(){
+		this.aa='aa';
+	}
+/*
+	var json_data = '{
+		"family": [
+			{
+				"name" : "Bruce",
+				"age": 12,
+				"kg": 22,
+			},
+			{
+				"name" : "Dylan",
+				"age": 34,
+				"kg": 23,
+			}
+		]
+	}';
+
+	var json_obj = JSON.parse(json_data);
+*/
+</script>
 
 </html>

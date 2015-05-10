@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.container a.effect {
+a.effect {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -18,7 +18,7 @@
   overflow: hidden;
   /*超出你設定的長寬的東西都會被隱藏*/
 }
-.container a.effect span {
+a.effect span {
   position: absolute;
   top: 0;
   left: 0;
@@ -39,7 +39,7 @@
   transition: box-shadow 0.5s ease-out, color 0.3s 0.1s ease-out;
   /*設定box-shadow transition特效*/
 }
-.container a.effect span:hover {
+a.effect span:hover {
   color: #fff;
   box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.8);
 }
