@@ -1,3 +1,5 @@
+@import "_reset.scss";
+
 /*
 Rules:
 	-----font------
@@ -30,8 +32,8 @@ Rules:
 	$rem-24: 2rem;
 	$rem-28: 2.333rem;
 /////Colour\\\\\
-	$bg-body: #ebebeb; //temp
-	$bg-card: #f3f3f3;	//temp
+	$bg-body: #efefef; //temp
+	$bg-card: #dedede;	//temp
 
 	$light-line: 1px solid #e5e5e5;
 	
@@ -142,35 +144,7 @@ Rules:
 			clear: both;
 		}
 	}
-	////align\\\\
-	.middle-align {
-		display: table;
-		>* {
-			display: table-cell;
-			vertical-align: middle;
-			float: none;
-		}
-	}
-	.flex {
-		display: flex;
-		float: none;
-		&.c-c {
-			justify-content: center;
-			align-items: center;
-		}
-		&.l-c {
-			justify-content: flex-start;
-			align-items: center;
-		}
-		&.r-c {
-			justify-content: flex-end;
-			align-items: center;
-		}
-	}
-	.center {text-align: center;}
-	.right  {text-align: right;}
-	.left   {text-align: left;}
-	//////
+	////Grid\\\\
 	.th-xs  {width: 60px;}
 	.th-xxs {width: 20px;}
 
@@ -237,6 +211,37 @@ Rules:
 		&.offset-s15 {margin-left: 93.75%;}
 		&.offset-s16 {margin-left: 100%;}
 	}
+	////align\\\\
+	.middle-align {
+		display: table;
+		>* {
+			display: table-cell;
+			vertical-align: middle;
+			float: none;
+		}
+	}
+	.flex {
+		display: flex;
+		float: none;
+		&.c-c {
+			justify-content: center;
+			align-items: center;
+		}
+		&.l-c {
+			justify-content: flex-start;
+			align-items: center;
+		}
+		&.r-c {
+			justify-content: flex-end;
+			align-items: center;
+		}
+		>* {
+			float: none;
+		}
+	}
+	.center {text-align: center!important;}
+	.right  {text-align: right!important;}
+	.left   {text-align: left!important;}
 /////Var\\\\\
 	$radius: 4px;
 	$inner-dis: 1.5rem;
@@ -443,6 +448,7 @@ body {
 	}
 }
 .container {
+	$inner-dist: 16px;
 	.shop-car {
 		padding: 0;	//// important
 		border-radius: $radius;
@@ -450,74 +456,126 @@ body {
 		margin-bottom: 50px;
 		background: $bg-card;
 		.store {
-			border-top: 1px solid $theme-1; //temp
-			box-shadow: 0 1px 0 0 #fff inset; //temp
 			@include border-box;
-			margin: 8px;
+			padding: $inner-dist 0;
 			figure {
+				a {
+					padding: 0 $inner-dist;
+				}
 				img {
 					border-radius: 50%;
 					border: 1px solid $theme-1;
 					width: 40px; //temp
 				}
 				figcaption {
-					padding: 0px 10px;
+					@include text-hide();
+					padding-left: $inner-dist;
 					font-size: $rem-21;
 			  		color: $text-2;
 			  		font-weight: 900;
 				}
 			}
 			.func {
-
-			}
-		}
-		.pay-way {
-			border-top: 1px solid #aaa; //temp
-			box-shadow: 0 1px 0 0 #fff inset; //temp
-			margin: 8px;
-			.title {
-				font-size: $rem-16;
+				text-align: center;
 			}
 		}
 		.main-content {
-			.ship {
-				.title {
+			background: #fff;
+			.title[role="table-title"] {
+				border-bottom: 1px solid #aaa; //temp
+				@include border-box;
+				div {
 					font-size: $rem-14;
-				}
-				.content {
-
-				}
-				.sum {
-
-				}
-				.wording {
-
+					color: $text-2;
+					text-align: center;
 				}
 			}
 			.list {
-				.title {
+				.content[role="pro-content"] {
 					div {
 						font-size: $rem-14;
 						color: $text-2;
-					}
-				}
-				.content {
-					div {
-						font-size: $rem-14;
-						color: $text-2;
+						text-align: center;
 					}
 					figure {
 						
 					}
 				}
+				.ship {
+					padding: $inner-dist;
+					border-top: 1px solid #aaa;
+					.title {
+						font-size: $rem-14;
+					}
+					.content {
+						.process {
+							border-radius: 25px;
+							position: relative;
+							width: 400px; //temp
+							height: 24px; //temp
+							//background: #aaa;
+							border: 1px solid #dedede;
+							background: #f0f0f0;
+							.percent {
+								border-radius: 25px;
+								position: absolute;
+								@include slow-move(all, .4s, ease-in);
+								top: 0;
+								left: 0;
+								width: 200px;
+								height: 24px;
+								background: #aaa;
+							}
+							.spec {
+								position: relative;
+								color: #ddd;
+								text-shadow: 1px 1px 1px #666;
+							}
+						}
+					}
+					.sum {
+
+					}
+					.wording {
+
+					}
+					/// var container 
+					/// text shadow
+				}
 			}
 		}
 		.summary {
+			padding: 0px $inner-dist;
 			.title {
 
 			}
 			.func {
 
+			}
+		}
+		.pay-way {
+			border-right: 1px solid #aaa; //temp
+			box-shadow: 1px 0px 0 0 #fff; //temp
+			//padding-top: (($inner-dist / 4) * 3);
+			//margin: (($inner-dist / 4) * 3) $inner-dist;
+			padding-right: $inner-dist;
+			margin-right: $inner-dist;
+			.title {
+				font-size: $rem-12;
+				color: $text-2;
+				padding-right: $inner-dist;	
+			}
+			.content {
+				>div {
+					display: inline-block;
+					&[role="credit"] {
+						border-left: 1px solid #aaa;//temp
+					}
+				}
+				label {
+					font-size: $rem-12;
+					color: $text-2;
+				}
 			}
 		}
 	}
@@ -560,23 +618,47 @@ button {
 	}
 }
 input {
+	+ label {
+		@include slow-move(all, .4s, ease-in);
+		&:before, &:after {
+			content: '';
+			@include slow-move(all, .4s, ease-in);
+		}
+	}
 	&[type="radio"]{
 		display: none;
 		+ label {
+			position: relative;
+			margin: 0 8px;
+			color: $theme-inactive;
+			display: inline-block;
+			&:before, &:after {
+				-webkit-border-radius: 50%;
+				        border-radius: 50%;
+			} 
 			&:before {
-				content: '';
-				width: 10px;
-				height: 10px;
-				border-radius: 50%;
-				border: 2px solid #aaa;
+				width: 12px;
+				height: 12px;
+				border: 2px solid $theme-inactive;
 				display: inline-block;
 				position: relative;
+				top: 2px;
+				margin-right: 6px;
 			}
 		}
 		&:checked {
 			+label {
+				color: $theme-1;
 				&:before {
-					border: 2px solid #000;
+					border: 2px solid $theme-1;
+				}
+				&:after {
+					width: 8px;
+					height: 8px;
+					position: absolute;
+					left: 4px;
+					top: 6px;
+					background: $theme-1;
 				}
 			}
 		}
@@ -590,13 +672,11 @@ input {
 			display: block;
 			position: relative;
 			border: 1px solid $theme-inactive;
-			@include slow-move(all, .4s, ease-in);
 		}
 		&:checked {
 			+ label {
 				border: 1px solid $theme-inactive;
 				&:before {
-					content: '';
 					width: 5px;
 					height: 15px;
 					display: block;
@@ -616,6 +696,10 @@ select {
 	font-family: inherit;
 	border-radius: $radius;
 	cursor: pointer;
+	outline: none;
+	option {
+		
+	}
 }
 ////////////////
 	.ship-tr, .ship-free-tr{
