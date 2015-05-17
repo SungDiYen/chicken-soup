@@ -339,7 +339,15 @@ button.buy {
   font-size: 1.167rem;
 }
 
+hover_status, .btn.primary:hover, .btn.air:hover, .btn.space:hover {
+  background: -webkit-linear-gradient(-90deg, rgba(240, 32, 113, 0.8), rgba(247, 93, 60, 0.8));
+  background: -moz-linear-gradient(-90deg, rgba(240, 32, 113, 0.8), rgba(247, 93, 60, 0.8));
+  background: -o-linear-gradient(-90deg, rgba(240, 32, 113, 0.8), rgba(247, 93, 60, 0.8));
+  background: linear-gradient(-90deg, rgba(240, 32, 113, 0.8), rgba(247, 93, 60, 0.8));
+}
+
 .btn {
+  cursor: pointer;
   display: inline-block;
   border-radius: 4px;
   font-size: 1.5rem;
@@ -359,12 +367,6 @@ button.buy {
   background: -o-linear-gradient(-90deg, #f02071, #f75d3c);
   background: linear-gradient(-90deg, #f02071, #f75d3c);
 }
-.btn.primary:hover {
-  background: -webkit-linear-gradient(-90deg, rgba(240, 32, 113, 0.8), rgba(247, 93, 60, 0.8));
-  background: -moz-linear-gradient(-90deg, rgba(240, 32, 113, 0.8), rgba(247, 93, 60, 0.8));
-  background: -o-linear-gradient(-90deg, rgba(240, 32, 113, 0.8), rgba(247, 93, 60, 0.8));
-  background: linear-gradient(-90deg, rgba(240, 32, 113, 0.8), rgba(247, 93, 60, 0.8));
-}
 .btn.air {
   border: 1px solid #f75d3c;
   background: transparent;
@@ -379,14 +381,6 @@ button.buy {
 }
 .btn.air:hover {
   border: 1px solid rgba(247, 93, 60, 0.87);
-  background: -webkit-linear-gradient(0deg, rgba(240, 32, 113, 0.8), rgba(247, 93, 60, 0.8));
-  background: -moz-linear-gradient(0deg, rgba(240, 32, 113, 0.8), rgba(247, 93, 60, 0.8));
-  background: -o-linear-gradient(0deg, rgba(240, 32, 113, 0.8), rgba(247, 93, 60, 0.8));
-  background: linear-gradient(0deg, rgba(240, 32, 113, 0.8), rgba(247, 93, 60, 0.8));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
 }
 .btn.chubby {
   border-radius: 25px;

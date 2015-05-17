@@ -353,7 +353,11 @@ Rules:
 		}
 	}
 	//// Link btn\\\\
+	hover_status {
+		@include linear-gradient(-90deg, rgba($sub-theme-color, .8), rgba($theme-color, .8));
+	}
 	.btn {
+		cursor: pointer;
 		display: inline-block;
 		border-radius: $radius;
 		font-size: $rem-18;
@@ -368,7 +372,7 @@ Rules:
 		    color: #fff;
 		    @include linear-gradient(-90deg, $sub-theme-color, $theme-color);
 		    &:hover {
-		    	 @include linear-gradient(-90deg, rgba($sub-theme-color, .8), rgba($theme-color, .8));
+		    	 @extend hover_status;
 		    }
 		}
 		&.air {
@@ -378,7 +382,7 @@ Rules:
 		    
 		    &:hover {
 				border: 1px solid $theme-2;
-				@include text-linear-gradient(0deg, rgba($sub-theme-color, .8), rgba($theme-color, .8));
+				@extend hover_status;
 		    }
 		}
 		&.chubby {
@@ -388,6 +392,9 @@ Rules:
 			border-width: 0px;
 			background: transparent;
 			@include text-linear-gradient(0deg, $sub-theme-color, $theme-color);
+			&:hover {
+				@extend hover_status;
+			}
 		}
 		&.icon {}
 		&.disable {
