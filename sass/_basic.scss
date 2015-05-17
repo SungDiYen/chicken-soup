@@ -31,6 +31,7 @@ Rules:
 	$rem-21: 1.75rem;
 	$rem-24: 2rem;
 	$rem-28: 2.333rem;
+	$rem-32: 2.666rem;
 	$rem-36: 3rem;
 	$rem-42: 3.5rem;
 	$rem-48: 4rem;
@@ -187,57 +188,7 @@ Rules:
 			clear: both;
 		}
 	}
-	////Grid\\\\
-			.th-xs  {width: 60px;}
-			.th-xxs {width: 20px;}
-
-			.col-xs {width: 5%;}
-			.col-s  {width: 7.5%;}
-			.col-m  {width: 10%;}
-			.col-l  {width: 30%;}
-			.col-xl {width: 50%;}
-	.row {
-		&.xs {min-height: 24px;}
-		&.s  {min-height: 48px;}
-		&.m  {min-height: 72px;}
-		&.l  {min-height: 96px;}
-	}
-	.col {
-		float: left;
-		&.s1  {width: 06.25%;}
-		&.s2  {width: 12.5%;}
-		&.s3  {width: 18.75%;}
-		&.s4  {width: 25%;}
-		&.s5  {width: 31.25%;}
-		&.s6  {width: 37.5%;}
-		&.s7  {width: 43.75%;}
-		&.s8  {width: 50%;}
-		&.s9  {width: 56.25%;}
-		&.s10 {width: 62.5%;}
-		&.s11 {width: 68.75%;}
-		&.s12 {width: 75%;}
-		&.s13 {width: 81.25%;}
-		&.s14 {width: 87.5%;}
-		&.s15 {width: 93.75%;}
-		&.s16 {width: 100%;}
-		//////
-		&.offset-s1  {margin-left: 06.25%;}
-		&.offset-s2  {margin-left: 12.5%;}
-		&.offset-s3  {margin-left: 18.75%;}
-		&.offset-s4  {margin-left: 25%;}
-		&.offset-s5  {margin-left: 31.25%;}
-		&.offset-s6  {margin-left: 37.5%;}
-		&.offset-s7  {margin-left: 43.75%;}
-		&.offset-s8  {margin-left: 50%;}
-		&.offset-s9  {margin-left: 56.25%;}
-		&.offset-s10 {margin-left: 62.5%;}
-		&.offset-s11 {margin-left: 68.75%;}
-		&.offset-s12 {margin-left: 75%;}
-		&.offset-s13 {margin-left: 81.25%;}
-		&.offset-s14 {margin-left: 87.5%;}
-		&.offset-s15 {margin-left: 93.75%;}
-		&.offset-s16 {margin-left: 100%;}
-	}
+	
 	////align\\\\
 	.middle-align {
 		display: table;
@@ -290,9 +241,79 @@ Rules:
 	}
 	ul, ol {list-style: none;}
 	a {text-decoration: none;}
-
+////Grid\\\\
+	.row {
+		&.xs {min-height: 24px;}
+		&.s  {min-height: 48px;}
+		&.m  {min-height: 72px;}
+		&.l  {min-height: 96px;}
+	}
+	.col {
+		float: left;
+		&.s1  {width: 06.25%;}
+		&.s2  {width: 12.5%;}
+		&.s3  {width: 18.75%;}
+		&.s4  {width: 25%;}
+		&.s5  {width: 31.25%;}
+		&.s6  {width: 37.5%;}
+		&.s7  {width: 43.75%;}
+		&.s8  {width: 50%;}
+		&.s9  {width: 56.25%;}
+		&.s10 {width: 62.5%;}
+		&.s11 {width: 68.75%;}
+		&.s12 {width: 75%;}
+		&.s13 {width: 81.25%;}
+		&.s14 {width: 87.5%;}
+		&.s15 {width: 93.75%;}
+		&.s16 {width: 100%;}
+		//////
+		&.offset-s1  {margin-left: 06.25%;}
+		&.offset-s2  {margin-left: 12.5%;}
+		&.offset-s3  {margin-left: 18.75%;}
+		&.offset-s4  {margin-left: 25%;}
+		&.offset-s5  {margin-left: 31.25%;}
+		&.offset-s6  {margin-left: 37.5%;}
+		&.offset-s7  {margin-left: 43.75%;}
+		&.offset-s8  {margin-left: 50%;}
+		&.offset-s9  {margin-left: 56.25%;}
+		&.offset-s10 {margin-left: 62.5%;}
+		&.offset-s11 {margin-left: 68.75%;}
+		&.offset-s12 {margin-left: 75%;}
+		&.offset-s13 {margin-left: 81.25%;}
+		&.offset-s14 {margin-left: 87.5%;}
+		&.offset-s15 {margin-left: 93.75%;}
+		&.offset-s16 {margin-left: 100%;}
+	}
 
 ////component\\\\
+	.headline {
+		color: $text-1;
+		@include slow-move(color, .4s, ease-in);
+		&.h1 {
+			font-size: $rem-24;
+			line-height: $rem-38;
+		}
+		&.h2 {
+			font-size: $rem-21;
+			line-height: $rem-32;3
+		}
+		&.h3 {
+			font-size: $rem-18;
+			line-height: $rem-28;
+		}
+		&.h4 {
+			font-size: $rem-16;
+			line-height: $rem-24;
+		}
+		&.h5 {
+			font-size: $rem-14;
+			line-height: $rem-21;
+		}
+		&.h6 {
+			font-size: $rem-12;
+			line-height: $rem-18;
+		}
+	}
 	button {
 		cursor:pointer;
 		outline: none;
@@ -353,9 +374,8 @@ Rules:
 		&.air {
 			border: 1px solid $theme-1;
 			background: transparent;
-		    >*{
-				@include text-linear-gradient(0deg, $sub-theme-color, $theme-color);
-		    }
+			@include text-linear-gradient(0deg, $sub-theme-color, $theme-color);
+		    
 		    &:hover {
 				border: 1px solid $theme-2;
 				@include text-linear-gradient(0deg, rgba($sub-theme-color, .8), rgba($theme-color, .8));
@@ -367,6 +387,7 @@ Rules:
 		&.space {
 			border-width: 0px;
 			background: transparent;
+			@include text-linear-gradient(0deg, $sub-theme-color, $theme-color);
 		}
 		&.icon {}
 		&.disable {
