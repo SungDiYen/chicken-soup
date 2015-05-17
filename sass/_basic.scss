@@ -368,6 +368,7 @@ Rules:
 			border-width: 0px;
 			background: transparent;
 		}
+		&.icon {}
 		&.disable {
 		    background: $theme-inactive;
 		    color: $text-2;
