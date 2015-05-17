@@ -333,8 +333,10 @@ Rules:
 	}
 	//// Link btn\\\\
 	.btn {
+		display: inline-block;
 		border-radius: $radius;
 		font-size: $rem-18;
+		line-height: $rem-28;
 		background: $theme-inactive;
 		color: $text-2;
 		padding: 8px 16px;
