@@ -384,6 +384,7 @@ hover_status, .btn.primary:hover, .btn.air:hover, .btn.space:hover {
 }
 .btn.chubby {
   border-radius: 25px;
+  padding: 8px 24px;
 }
 .btn.space {
   border-width: 0px;
@@ -396,6 +397,13 @@ hover_status, .btn.primary:hover, .btn.air:hover, .btn.space:hover {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
+}
+.btn.icon {
+  color: #fff;
+  background: -webkit-linear-gradient(-90deg, #f02071, #f75d3c);
+  background: -moz-linear-gradient(-90deg, #f02071, #f75d3c);
+  background: -o-linear-gradient(-90deg, #f02071, #f75d3c);
+  background: linear-gradient(-90deg, #f02071, #f75d3c);
 }
 .btn.disable {
   background: rgba(0, 0, 0, 0.26);
@@ -654,6 +662,13 @@ select.field + .title {
 select.field:focus + .title {
   color: rgba(247, 93, 60, 0.87) !important;
   font-size: 1rem !important;
+}
+
+card_1 {
+  -webkit-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.76);
+  -moz-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.76);
+  -o-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.76);
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.76);
 }
 
 body {

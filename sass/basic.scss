@@ -387,6 +387,7 @@ Rules:
 		}
 		&.chubby {
 			border-radius: 25px;
+			padding: 8px 24px;
 		}
 		&.space {
 			border-width: 0px;
@@ -396,7 +397,13 @@ Rules:
 				@extend hover_status;
 			}
 		}
-		&.icon {}
+		&.icon {
+			color: #fff;
+		    @include linear-gradient(-90deg, $sub-theme-color, $theme-color);
+			i{
+				
+			}
+		}
 		&.disable {
 		    background: $theme-inactive;
 		    color: $text-2;
@@ -656,7 +663,10 @@ Rules:
 			}
 		}
 	}
-
+////Extend Area\\\\
+card_1 {
+	@include shadow(0px, 1px, 0px, 0px, #000, .76);
+}
 ////////////////////////////////////////////////////////
 ///////////////////////////////////////////////
 ///////////////////////////////
