@@ -46,6 +46,21 @@
 <!--JS-->
 <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
 <script>
+		footer_position();
+		$(window).resize(footer_position);
+
+		function footer_position(){
+			screen_h=$(window).height();
+			content_h=$('body').height();
+			if(screen_h>content_h){
+				$('footer').addClass('window_bottom');
+			}
+			else{
+				$('footer').removeClass('window_bottom');
+			}
+		}
+</script>
+<script>
 
 	/*function aa( ){
 		var name = 'aaaaa';
@@ -79,7 +94,7 @@
 		this.aa='aa';
 	}
 	*/
-/*
+	/*
 	var json_data = '{
 		"family": [
 			{
@@ -96,7 +111,7 @@
 	}';
 
 	var json_obj = JSON.parse(json_data);
-*/
+	*/
 </script>
 
 </html>

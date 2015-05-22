@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>c3</title>
+
+<link href="../Desktop/c3-0.4.10/c3.min.css" rel="stylesheet" type="text/css">
+<script src="../Desktop/c3-0.4.10/c3.min.js" charset="utf-8"></script>
+<script src="../Desktop/d3-master/d3.min.js" charset="utf-8"></script>
+</head>
+<body>
+
+<!--CONTENT-->
+
+<div id="chart_1">
+	
+</div>
+<div id="chart_2">
+	
+</div>
+<div id="chart_3">
+	
+</div>
+<div id="chart_4">
+	
+</div>
+<script>
+	var line_one='a';//要在最外層宣告
+
+	var chart = c3.generate({
+		bindto: '#chart_1',	//dom對應ID
+		axis: {
+			x: {
+				show: true, //其實default就是true
+				type: 'category',	//組合計，並且會附蓋掉data中對X軸的設定。
+				categories: ['cata_1','cata_2','cata_3','cata_4','cata_5'],
+				tick: {
+					centered: true,//讓cate的標題置中於X軸節點。(其實是改變結點位置)
+					rotate: 75,//捷運局最愛，讓X軸標籤旋轉效果。
+					/*culling: {
+						max: 3,	//X軸節點的標籤，會少於最大質。
+						count: 5,	//同上
+						//true for indexed axis and timeseries axis
+						//false for category axis
+					}*/
+				},
+				label: {
+					text: '分類區塊',
+					position: 'outer-center',
+				}
+			},
+			y: {
+				show: true,	//其實default就是true
+				label: {
+					text: '我式Y軸',
+					position: 'inner-middle',
+				},
+				//inverted: true, //Y軸節點上下對調
+				padding: {	//圖表內縮距離，超出就消失
+					top: -50,
+				}
+			},
+			//rotated: true, X、Y軸對調
+		},
+		data: {
+			x: 'x-axis',	//將數值跑去X軸(把參數當作X軸使用)
+			axes: {		//將數值跑去y軸(把參數當作X軸使用)，但數值(線條)不消失
+				'b': 'y',
+			},
+			columns: [
+				['x-axis', 0, '100', '200', 300, 400, 500],
+				[line_one, 30, 200, 10, 80, 500],
+				['b',	   10, 50, 100, 80, 10, 400,500],
+			],
+			////直式、橫式任君挑選
+			/*rows: [
+				['1111', '2222', '3333'],
+				[10,20,30],
+				[30,20,10],
+				[100,20,30],
+			],*/
+			names: {
+				a: '第一條',	//不能用變數
+				b: '第二條'
+			},
+			classes: {	//<g> 增加class，但前輟詞是[c3-target-]
+				a: 'first_class',
+				b: 'second_class',
+			},
+			//type:'bar',	//整體設定
+			types: {	//個別設定
+				a: 'spline',
+				b: 'area-spline',
+			},
+			regions: { //會附蓋掉types的設定
+				a: [{'start': 100, 'end': 200, 'style':'dashed'},{'start':300}],
+			},
+			/*groups: [	//就是群組功能 div的概念//數值也會累加
+				[line_one,'b'],	// a+b概念
+			],*/
+			selection: {	//線圖比較有用。
+				enabled: true,//似乎是讓數據線的圓點hover時，指標變手勢。cursor:pointer
+				grouped: true, //點下去後，節點會被凸顯出來。
+				multiple: true,//pass
+				draggable: true,	//可以選取範圍
+				/*isselectable: function(){
+					// 類似callback,但有著危機埋伏在其中。
+				},*/
+			},
+			onclick: function (){
+				//點擊圖表就會觸發的事件。
+			},
+		},
+		size: {
+			width: 960,
+			height: 640,
+		},
+		padding: {
+			top: 100,
+			left: 100,
+		},
+		color: {
+			pattern: ['#ff9800','#054'],
+		},
+		interaction: {	///不知道可以幹嘛
+			enabled: true,
+		},
+		transition: {	//載入的fadein效果
+			duration: 1000,
+		},
+		regions: [	//可以幫圖表的區塊，透過class設定底色或其他變化 │ 前輟詞[.c3-region.]
+			{axis: 'x', end: 1, class: 'regionX'},
+			{axis: 'y', start: 50, end: 150,  class: 'regionY'},
+		],
+		/*oninit: function(){	//視窗剛載入的時候，就會呼叫一次
+			alert('ee')
+		},
+		onrendered: function(){	//每次視窗有改變的時候or參數有改變時，就會呼叫(更新)
+			alert('bb')
+		},*/
+
+	});
+	////////////////////////////////////
+	var chart_2= c3.generate({
+		bindto: '#chart_2',
+		grid: {	//格線系統阿,會有淡灰色的線
+			y: {
+				lines: [{value:0}]
+			}
+		},
+		axis: {
+			x: {
+				type: 'timeseries',
+					/*
+					timeseries,
+					catagory, //間距型
+					indexed, //default 1,2,3,4,5...
+					*/
+				//localtime: false,	//抓取本地端時間，建議配合tick + timeseries
+				tick: {
+					format: '%Y-%m-%d',	//Y一定要大寫??
+				},
+				label: {
+					text: '時間軸',
+					position: 'inner-center',
+				}
+			}
+		},
+		data:{
+			x:'x-time',
+			rows:[
+				['aaa', 'bbb', 'ccc','ddd', 'x-time'],
+				[-10, 20, 50, 10, '2015-10-01'],
+				[40, 20, 100, 10, '2015-10-02'],
+				[70, 90, 10, 20, '2015-10-03']
+			],
+			/*types: {
+				aaa: 'spline',	
+				bbb: 'area-spline',
+				ccc: 'area',
+				
+				Spline  曲線
+				Step 	區塊	(塊狀連續)
+				Area 	區域
+				Bar 	條狀	(塊狀不連續)
+				Scatter 點狀常態分布圖!?
+				Pie 	圓餅成份圖
+				Donut   中空的圓餅
+				Gauge   彩虹形狀(引擎指標)
+				
+			},*/
+			type: 'bar',
+			//labels: true,	//顯示每個節點上的數值
+			labels: {
+				format: {	//個別的顯示方式
+					ccc: d3.format('$'),
+					//aaa: d3.format('#'),
+				}
+			},
+			//order: 'desc', //資料排序，由大到小 (預設)
+			//order: 'asc', //資料排序，由小到大
+			colors: {
+				aaa: '#aaa',
+				bbb: '#045',
+				ccc: '#548',
+			},
+			color: function(color,d){	//針對單一區塊，隨數值變化做顏色漸變
+				return d.id && d.id ==='aaa' ? d3.rgb(color).darker(d.value / 30) : color;
+			},
+		},
+		legend: {
+			position: 'right',
+		}
+	})
+	var chart_3= c3.generate({
+		bindto: '#chart_3',
+		data: {
+			axis: {
+				x: {
+					show: true,
+					type: 'indexed',
+					min: -10,
+					max: 60,
+					padding: {
+						left: 50,
+						top: 10,
+					},
+					height: 10,
+					extend: [5,10],
+					culling: {
+						count: 2,
+					},
+					label: {
+						text: '我是X軸',
+						//position: 'outer-right',
+					}
+				},
+			},
+			columns: [
+				['one', -10, 10, 20 ,30, 50 ,10],
+				['two', -50, 50, 25, 10, 50 ,10],
+				['three', -50, 50, 24, 120, 50 ,10],
+				['four', 50, 50, 125, 0, 50 ,10],
+			],
+			type : '',
+		},
+		grid: {
+			x: {
+				show: true,
+				lines: [
+					{value: 2, text: '222222', position: 'middle', class: 'axis_2'},
+					{value: 3, text: '我是X軸的小三', position: 'start', class: 'axis_3'},
+					{value: 4, text: '去死吧', position: 'end'},
+				],
+			},
+			y: {
+				show: true,
+				lines: [
+					{value: -10, text: 'y-one', position: 'middle', class: 'y-good'},
+					{value: 50, text: 'Y-超出', position: 'start', class: 'y-bad'},
+				],
+			},
+		},
+		legend: {
+			position: 'inset',
+				//只支援inset	右上，圖表內
+				//bottom	下方
+				//right 	左側
+			inset: {	//對應position: 'inset' 可做任何位置的變化
+				anchor: 'top-right',
+				x: 50,
+				y: 50,
+				step: 3 //每一個直排(列?!)，能容納多少項目
+			},
+			item: {
+				onclick: function(){
+					//
+				}
+			}
+		},
+		tooltip: {
+			grouped: false, //讓提示的資料，每次只顯示該項目
+			format: {
+				title: function(num){
+					return '標題'+ num
+				},
+				value: function(value, id){
+					var format = id ==='one' ? d3.format(',') : d3.format('$');
+					return format(value);
+					/*
+						d3.format(',') //千位數區隔
+						d3.format('$') //多了錢字號
+						d3.format('s')//晚點查
+						d3.format('老子不支援中文，無法隨便調戲')
+					*/
+				},
+				name: function(){
+
+				}
+			}
+		}
+	})
+	var chart_none= c3.generate({
+		bindto: '#chart_4',
+		data: {
+			x: 'x',
+			columns:[
+				['x', 10,20,30,40],
+				[''],
+				[],
+			],
+			empty: {//需要再整個欄位都沒有資料的狀態下，才會顯示
+				label: {
+					text: '無資料'
+				}
+			},
+		}
+	})
+</script>
+<style>
+	.c3-region.regionX {
+		fill: rgba(0,0,0,.5);
+	}
+	.c3-region.regionY {
+		fill: rgba(10,80,74, .9);
+	}
+	/*.c3-bars {
+		fill: rgba(48,157,195,1);
+	}*/
+	.axis_2 {
+		stroke: red;
+	}
+	.axis_3 {
+		stroke: #215799;
+		storke-width: 5;
+		font-size: 12px;
+	}
+	.axis_3 line {
+		stroke: #f8f220;
+		stroke-width: 5;
+	}
+	.axis_3 text {
+		fill: #000;
+		font-size: 21px;
+	}
+	.y-good line {
+		stroke: #874115;
+		stroke-width: 3;
+	}
+	.y-bad text {
+		fill: #d5d599;
+		font-size: 21px;
+	}
+</style>
+</body>
+</html>
