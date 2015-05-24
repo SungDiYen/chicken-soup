@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>c3</title>
+
+<!--<link href="../Desktop/c3-0.4.10/c3.min.css" rel="stylesheet" type="text/css">
+<script src="../Desktop/c3-0.4.10/c3.min.js" charset="utf-8"></script>
+<script src="../Desktop/d3-master/d3.min.js" charset="utf-8"></script>-->
+<link rel="stylesheet" href="/Users/DiYenSung/bower_components/c3-0.4.10/c3.min.css">
+<script src="/Users/DiYenSung/bower_components/c3-0.4.10/c3.min.js"></script>
+</head>
+<script src="/Users/DiYenSung/bower_components/d3-master/d3.min.js"></script>
+<body>
+
+<!--CONTENT-->
+
+<div id="circle">
+
+</div>
+<div id="pie">
+	
+</div>
+<div id="line">
+	
+</div>
+<div id="gauge">
+	
+</div>
+<svg width="100" height="100">
+    <defs>
+        <linearGradient id="grad1" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="60%" stop-color="#ff9800"/>
+            <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+        </linearGradient>
+    </defs>
+    <path d="M50 10  A40 40 0 1 0 90 50"
+        stroke="url(#grad1)" stroke-width="10" fill="transparent"/>
+</svg>
+<script>
+	var pie= c3.generate({
+		bindto: '#pie',
+		data: {
+			columns: [
+				['one', 10],
+				['two', 40],
+			],
+			type: 'pie',
+		},
+	});
+
+	/////
+
+	var circle = c3.generate({
+		bindto: '#circle',
+		data: {
+			columns: [
+				['one', 20],
+				['two', 100],
+				['three', 100],
+				['four', 100],
+				['five', 100],
+				['six', 100],
+				['unknow', 100],
+				['onsno', 100],
+			],
+			type: 'donut',
+			/*colors: {
+				'one': 'red',
+				'two': 'blue',
+			},*/
+		},
+		label: {},
+		color:{	 //用在default比較適合，用完之後會LOOP
+			pattern: ['#FF4E50','#F9D423','#00D2FF','#3CD3AF','#232526','#dbdcdc']
+		},
+	});
+
+	//////////
+
+	var line = c3.generate({
+		bindto: '#line',
+		data: {
+			columns: [
+				['one', 20, 40, 20, 60, 0 ,40, 0],
+			],
+			type: "area-spline",
+		},
+		axis: {
+			y: {
+				max: 100,
+				min: -100,
+				padding: {top: 0, bottom: 0} //可以消除Y軸最上面的
+			}
+		},
+		point: {
+			r: 4,
+		},
+		
+		area: {
+			//zerobased: false, //Y軸是否貼地
+		},
+	})
+
+	/////
+
+	var gauge = c3.generate({
+		bindto:'#gauge',
+		data: {
+			columns: [['only_one', 40]],
+			type: 'gauge',
+		},
+	})
+</script>
+<style>
+	.c3-areas path {
+		fill: url(#grad1)!important;
+	}
+	/*.c3#gauge {transform: rotate(-45deg);} */
+
+</style>
+</body>
+</html>
