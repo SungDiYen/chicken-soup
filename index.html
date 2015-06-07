@@ -39,79 +39,67 @@
 			</section>
 		</article>
 	</div>
-	<footer>
-		guyuy
-	</footer>
-
+	<select name="" id="num">
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+	</select>
+	
+	<select name="" id="alpha">
+		<option value="a">a</option>
+		<option value="b">b</option>
+		<option value="c">c</option>
+	</select>
 <!--JS-->
 <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
 <script>
-		footer_position();
-		$(window).resize(footer_position);
+var dom_num = document.getElementById('num');
+var dom_alpha = document.getElementById('alpha');
 
-		function footer_position(){
-			screen_h=$(window).height();
-			content_h=$('body').height();
-			if(screen_h>content_h){
-				$('footer').addClass('window_bottom');
-			}
-			else{
-				$('footer').removeClass('window_bottom');
-			}
-		}
+dom_num.style.display= 'block'; //直接在html中加上style
+dom_alpha.classList.add('test','one');	//在指定標籤加上class，可接受複數，用逗點區隔
+dom_alpha.classList.remove('one');	//等同於removeClass效果
+
+test=''
+function a(){
+	this.eee='rrgreg'
+	var test=1334;
+	this.test='efr'
+	return test
+}
+var b = new a;
+
+
+var cc = function(go){
+	this.pro='pro'
+	this.go='go'
+}
+var dd= new Object;
+dd.prototype= new cc();
+
+
+function todo(){
+	alert('topo')
+}
+todo.a= function(go){
+	alert(go)
+}
+todo.prototype.pro= function(go){
+
+	alert(go)
+}
+//todo.a('efwef');
+//todo.prototype.pro('efwf');
+//todo.pro('fe')// 沒被定義啊！ 廢話
+
+
+function fff(a,b){
+	alert('gnoeitrg');
+	cd = a+b;
+	//return cd;
+}
+
+var car = new fff(1,5);  //為何會被呼叫？ 
+alert(cd)
 </script>
-<script>
-
-	/*function aa( ){
-		var name = 'aaaaa';
-
-		function abbb(){
-			//var name="bbbbb";
-			//alert(name);
-		}
-		//abbb()
-		return abbb;
-	}
-	//aa();
-	var A_A = aa();//閉包是一種特殊的物件，其中結合了兩樣東西︰函數，和函數所建立的環境。
-	A_A()
-	///////////////////////
-	function em(){
-		var msg='refe';
-		this.ele = null;
-		this.msg = msg;
-		this.click = function(){
-			alert(this.msg)
-		}
-	}
-	var EM = new em();
-	//alert(typeof EM)// object
-	alert(EM.click)
-
-	/////////////////////
-	var global = new GLOBAL();
-	function GLOBAL(){
-		this.aa='aa';
-	}
-	*/
-	/*
-	var json_data = '{
-		"family": [
-			{
-				"name" : "Bruce",
-				"age": 12,
-				"kg": 22,
-			},
-			{
-				"name" : "Dylan",
-				"age": 34,
-				"kg": 23,
-			}
-		]
-	}';
-
-	var json_obj = JSON.parse(json_data);
-	*/
-</script>
-
 </html>

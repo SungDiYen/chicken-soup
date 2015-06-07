@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!--這部分若沒指定，會依照使用者所使用的瀏覽器的版本為主，因此可利用此語法跟瀏覽器說，用那個版本來作瀏覽。-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>SungDiYen</title>
+	<meta name="description" content="宋狄諺｜作品集">
+	<meta name="keywords" content="宋狄諺｜作品集">
+	<meta name="author" content"SungDiYen">
+	<meta name="copyright" contnet="2015.05.01///ver 0.1">
+	<meta name="URL" content"undefined">
+	<!--CSS-->
+	<link href="css/basic.css" rel="stylesheet">
+	<link href="css/expo.css" rel="stylesheet">
+	<!--SEO-->
+	<meta name="robots" content="index">
+</head>
+<body>
+	<div class="container">	
+		<div id="trigger"></div>
+	</div>
+
+<!--JS-->
+<script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+<script>
+	var Robot = {	
+		/** private */	
+		power: 100,	
+		
+		walk: function () {	
+			console.log('Robot walked');	
+			this.power -= 10;	//this = Robot;
+		},	
+		
+		fly: function () {	
+			console.log('Robot flied');	
+			this.power -= 20;	//this = Robot;
+		},	
+		
+		check: function (excute) {	
+			if (this.power > 0)		//this = Robot;
+				excute();	
+		},	
+			
+		/** public */	
+		/*
+		showoff: function () {	
+			this.check(function () {	//this = Robot;
+				this.walk(); // 實際執行的動作。 	//this = this;
+				this.fly();		//this = this (匿名函式，所以this到底是誰呢？)
+				//解決方法：閉包
+			})	
+		}
+		*/
+		showoff: function(){
+			var that= this;
+			this.check(function(){
+				that.walk();	//that = this = Robot
+				that.fly();
+			})
+		}
+	}		
+	Robot.showoff();
+
+//////closure/////
+//優點：可以訪問另一個函數域中的變數
+//缺點：消耗內存空間
+//閉包就是一個function
+//他產生了一個context，就是幫你記錄「上一層有宣告的變數」
+
+	var name = "Microsoft";
+	 
+	function funcA(){
+		var name = "Google";
+		alert(name);
+		return function(){	//funcA,返回一個「匿名函數」
+				name = "Facebook";	//為什麼不用this？
+				alert(name);
+		};
+		//return funcB();
+	}
+
+	/* 
+	funcA();		 //Google
+	funcA()();		 //Microsoft
+	var o = funcA(); //Google		//匿名函数的变量对象指针
+	alert(name);	 //Microsoft	//变量对象指针
+	o();			 //Facebook		//全局变量对象指针
+	*/
+
+	function add(x){
+		return function(y){	//匿名函式
+			return x+y;
+		}
+	}
+	var add5= add(5);
+	var no8 = add5(3);//add(5)(3)  x=5,y=3
+	console.log(no8);
+
+	(function(){	//直接呼叫匿名函式 > Self-invoking functions 自我啟動函式！？
+		var dog="Wow Wow";
+		console.log(dog);
+	})();	//不用呼叫，就直接執行了！
+///////this（含義：指向「那個」物件）
+	var name = "Global name";
+	 
+	function funcA(){
+		var name = "FuncA name";
+		return function(){
+			//alert(this.name);	//this指向全域變數（也可以說是指向window）
+				//其實this跟作用域沒有關係。//this也不會指向上一層作用域。//
+				//this = 這個function
+		};
+	}
+
+	funcA();	//沒東西show
+	funcA()(); //Global name //呼叫，函式funcA的匿名函式。
+
+/////.bind()////
+	var Robot = {	
+		/** private */	
+		power: 100,	
+		
+		walk: function () {	
+			console.log('Robot walked');	
+			this.power -= 10;	
+		},	
+		
+		fly: function () {	
+			console.log('Robot flied');	
+			this.power -= 20;	
+		},	
+		
+		check: function (excute) {	
+			if (this.power > 0)	
+				excute();	
+		},	
+			
+		/** public */	
+		showoff: function () {	
+			// var that = this;	
+			this.check(function () {	//組合技！！！
+				this.walk();	
+				this.fly();	
+			}.bind(this));	////綁定了this  && this = Robot
+			//上述格式：function.prototype.bind(this)
+			// 呼叫bind()就是建立一個新的function
+		}	
+	}	
+		
+	Robot.showoff();
+		/////
+		var foo = {  
+		    x: 3  
+		}  
+		  
+		var bar = function () {  
+		  console.log(this.x);  
+		}  
+		  
+		bar(); // undefined  
+		  
+		var boundFunc = bar.bind(foo); 
+		// >>> var boundFunc = bar.function(foo); bind就類似function
+		  
+		boundFunc(); // 3
+////.prototype繼承////
+	function father(){
+		this.setBirthdayYear(1989);
+	}
+
+	father.prototype.birthday = {	//father.birthday
+		year: null,
+		momth: null,
+		day: null,
+	}
+	father.prototype.setBirthdayYear=function(year){	//father.setBirthdayYear
+		this.birthday.year=year;
+	}
+	/*
+	function father(){
+		this.birthday={
+			year: null,
+			month: null,
+			day: null,
+		};
+		this.setBirthdayYear=function(year){
+			var that = this;
+			that.birthday.year=year;
+		}
+		this.setBirthdayYear(678);
+	}
+	*/
+	function kid(){
+		this.setBirthdayYear(2000);
+	}
+	kid.prototype= new father();	//終於繼承了！！
+</script>
+
+<script>
+	var clickMe = document.getElementById('trigger');
+	//var clickMe = document.querySelectorAll('trigger');
+	clickMe.innerHTML= 'clickThis';
+	//addEventListener('放入事件',要執行的函式 function(){...}) 
+	var logger = {
+		x: 0,
+		increment: function(){	//抓到了，匿名函式是你！？
+			this.x++;	//this = logger;
+			console.log(this.x);
+		},
+	}
+	//logger.increment() //1
+	/*
+	clickMe.addEventListener('click', logger.increment);
+	//出現NaN。原因：只傳入了function，但logger.x沒有傳過去，所以this.x就找不到拉
+	*/
+	clickMe.addEventListener('click', logger.increment.bind(logger)); //無法使用.bind(this)
+
+	var obj={
+		x: 20,
+		y: function(){
+			console.log(this.x);
+		},
+		innerObj: {
+			x: 30,
+			y:function(){
+				console.log(this.x);
+			}
+		}
+	}
+	obj.y();	//this = x = 20	(指向obj)
+	obj.innerObj.y();	//this = x = 30 (指向obj的innerObj)
+	//誰調用函式，this就指向誰。
+	
+	//this 不特別指定的話，就是指向window
+	var x= 10;
+	var obj={
+		x:20,
+		y: function(){
+			console.log(this.x);	//20	this = obj
+			var foo = function(){
+				console.log(this.x);	//10 this = window
+			}
+			foo();//調用的前方並未有物件，故foo內的this指向全域物件，所以輸出會是全域變數的x的值。
+		},
+		z: function(){
+			console.log(this.x);
+			var that= this;
+			var foo= function(){
+				console.log(that.x);
+			}
+		}
+	}
+	obj.y();
+	obj.z();
+</script>
+</html>
