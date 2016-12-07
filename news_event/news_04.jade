@@ -1,0 +1,32 @@
+extends ./../_layout.jade
+
+block p_title
+	title THL 最新消息
+block extra_style
+	link(rel="stylesheet", href="../css/news.css")
+block main_content
+	.container.main
+		.row
+			.col-lg-8.offset-lg-2
+				.article
+					.caption 新聞／News
+					h1.headline 欣新網跨足寵物產業
+					figure.image
+						img(src="../images/news_event/news_04.jpg", alt="")
+					p.para 欣新網自2016年5月起，正式跨足寵物產業！此次與嬌聯的合作，將原先的嬰兒紙尿褲、衛生棉及成人紙尿褲，擴展到寵物用品，開始銷售嬌聯消臭大師系列商品。同時，也與美商瑪氏簽訂合作合約，於9月份開始銷售美商瑪氏集團下的西莎、偉嘉等人氣商品。7月22日並舉辦「一日的寵物日」活動，讓大家帶自己的寵物陪同自己上班一天，當日的下午還舉辦了瑪氏寵物食品的產品教育訓練，除了深度介紹系列商品，瑪氏也帶來了豐富的寵物產品，當天的毛孩子們都吃得不亦樂乎，為合作展開了愉快的開端。
+			.col-lg-8.offset-lg-2
+				.extra
+					h4.title 最新消息 Lastest News
+					.row
+						mixin other_news(link, image, title, date)
+							.col-lg-4
+								a.block.news(href=link+'.html')
+									figure.image
+										img(src="../images/news_event/"+image+".jpg", alt="")
+									.info
+										h5.title= title
+										span.date= date
+						+other_news('news_02', 'news_02', '嬌聯日本總社長高原豪久 拜訪欣新網總部', '2016.05.10')
+						+other_news('news_03', 'news_03', '2016世界廚王台北爭霸賽 御用指定李錦記醬料', '2016.05.10')
+						+other_news('news_04', 'news_04', '欣新網跨足寵物產業', '2016.05.10')
+block extra_script

@@ -1,0 +1,61 @@
+extends ./../_layout.jade
+
+block p_title
+	title 產品資訊
+block extra_style
+	link(rel="stylesheet", href="../css/franchise.css")
+block main_content
+	.container-fluid.full_bg
+		section.intro.container
+			h1.headline
+				p.zh 產品資訊
+				p.en Franchise
+			h2.slogan
+				img(src="../images/slogan.png", alt="")
+	.container.back
+		button.btn.hidden-md-down(onclick='history.back()') 
+			i.fa(class='fa-chevron-left' aria-hidden='true')
+			span 回上一頁
+	article.container.article-wrap
+		.row
+			.col-md-4.col-sm-12
+				figure.brand_logo
+					img(src="../images/brand/agent-1.png", alt="")
+					img(src="../images/brand/agent-4.png", alt="")
+					img(src="../images/brand/agent-34.png", alt="")
+					img(src="../images/brand/agent-31.png", alt="")
+					img(src="../images/brand/agent-2.png", alt="")
+			.col-md-8.col-sm-12
+				section.article
+					h3.title P&G系列之品牌介紹
+					p.para
+						|2014年接下全球第一大家品公司-寶僑旗下部分商品總經銷權，其商品有:香必飄香氛類系列商品、JOY洗碗精、Ivory香皂、Bounty廚房紙巾、 Dawn洗碗精。
+				section.article
+					h3.title 香必飄 Ambi Pur
+					p.para
+						|Ambi Pur(香必飄)乃是源於歐洲的經典香薰品牌，自1960年於西班牙成立以來，秉持著「經典設計、持續創新」的原則，因應市場潮流不斷推出突破性的產品，至今已發展出包括汽車香薰、室內靜置型香薰、室內插電型香薰、潔廁香薰、清新噴霧之廣大產品線，其中汽車香薰更是歐洲第一的領導品牌。
+					p.para 
+						|2010年，寶僑公司正式收購Ambi Pur，將此歐洲知名品牌納入旗下。憑藉著Ambi Pur在歐洲的成功經驗，寶僑公司持續在全球佈局，並結合原有的Febreze品牌，期望在Air Care領域成為「世界第一」的領導品牌。
+					//-figure.pic
+						img(src="../images/brand/agent-16-pro.jpg", alt="")
+				section.article
+					h3.title Joy
+					p.para Joy 洗碗精是美國寶僑公司食器洗滌劑產品主要的品牌之一，在1949年誕生在美國。
+					p.para Joy 以高CP值為開發初衷，洗淨品質高，並且物超所值!
+					p.para Joy是第一個將食器洗滌劑加入檸檬香的清潔用品先驅。
+					p.para Joy 是設計給用手洗碗盤的人，並不是給機器清潔碗盤，因此它含能夠保護人們的手之潤膚劑，不會使手乾澀。
+					p.para 更是知名美式賣場熱銷產品之一。
+				section.article
+					h3.title Ivory
+					p.para 全球知名香皂品牌Ivory，是由美國P&G創始人Harley Proctor 與James N. Gamble自1879年推出上市，至今已超過130年。 因高純度、高品質、溫和不刺激的特性，深受消費者喜愛，堪稱世紀經典香皂。其系列商品也以純淨溫和的特性聞名。 Ivory香皂獲得80%美國媽媽推薦。
+				section.article
+					h3.title Bounty
+					p.para Bounty® 在美國長久以來一直是許多顧客們心目中廚房紙巾的首選。
+					p.para 現今，此品牌有個新標語叫作「Bring it.(儘管來)」反映著顧客們的態度，他們告訴我們Bounty使他們能夠不害怕髒亂的挑戰。
+				section.article
+					h3.title Dawn
+					p.para 自1973年創造品牌後， Dawn洗碗精主要訴求為”每一滴都有雙重去漬成分“，因強效去汙力而聲名大噪。在美國熱銷40餘年， Dawn已儼然成為清潔廚房災難的第一首選!!
+					p.para 在1980年代中期，動保者(IBRC國際鳥類救援研究中心) 甚至發現，Dawn其成分”溫和”，用來清潔被黑油汙染的動物們效果極佳。這36年以來，Dawn已經成功幫助保育團體拯救了數千隻動物。
+
+
+block extra_script

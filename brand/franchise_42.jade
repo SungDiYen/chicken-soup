@@ -1,0 +1,33 @@
+extends ./../_layout.jade
+
+block p_title
+	title 產品資訊
+block extra_style
+	link(rel="stylesheet", href="../css/franchise.css")
+block main_content
+	.container-fluid.full_bg
+		section.intro.container
+			h1.headline
+				p.zh 產品資訊
+				p.en Franchise
+			h2.slogan
+				img(src="../images/slogan.png", alt="")
+	.container.back
+		button.btn.hidden-md-down(onclick='history.back()') 
+			i.fa(class='fa-chevron-left' aria-hidden='true')
+			span 回上一頁
+	article.container.article-wrap
+		.row
+			.col-md-4.col-sm-12
+				figure.brand_logo
+					img(src="../images/brand/agent-42.png", alt="")
+			.col-md-8.col-sm-12
+				section.article
+					h3.title 施華蔻
+					p.para
+						|施華蔻:1898年始於德國, 超過110年歷史的悠久品牌, 無數個創新研發始於施華蔻, 是最頂級的頭髮修護專家, 精準修護頭髮損傷,深入髮芯,卻又不造成秀髮負擔施華蔻來自德國沙龍頂級奢寵品牌，擁有洗護、染燙、造型等多個子品牌，以頂級的護理、不斷的革新性的產品、專業的態度，為您帶來全方位美麗的展現。
+
+					figure.pic
+						img(src="../images/brand/agent-42-pro.jpg", alt="")
+
+block extra_script

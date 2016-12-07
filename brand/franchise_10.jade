@@ -1,0 +1,37 @@
+extends ./../_layout.jade
+
+block p_title
+	title 產品資訊
+block extra_style
+	link(rel="stylesheet", href="../css/franchise.css")
+block main_content
+	.container-fluid.full_bg
+		section.intro.container
+			h1.headline
+				p.zh 產品資訊
+				p.en Franchise
+			h2.slogan
+				img(src="../images/slogan.png", alt="")
+	.container.back
+		button.btn.hidden-md-down(onclick='history.back()') 
+			i.fa(class='fa-chevron-left' aria-hidden='true')
+			span 回上一頁
+	article.container.article-wrap
+		.row
+			.col-md-4.col-sm-12
+				figure.brand_logo
+					img(src="../images/brand/agent-10.png", alt="")
+			.col-md-8.col-sm-12
+				section.article
+					h3.title PEZ 
+					p.para
+						|來自奧地利原裝進口的PEZ，是一個具有收藏特色的獨特複合式玩偶水果糖。PEZ，是由德文字的薄荷而來PFEFFERMINZ。1927年，由Eduard Hass Ⅲ發明的「薄荷口味糖果」，創始之初是為了幫助成年人戒菸的涼糖，糖果匣也做成打火機的樣子 。1952年，爲了打進美國市場，PEZ將糖果匣再改良成有玩偶頭的盒子。<br>
+						|PEZ最大的特色，就是取得知名卡通人物的授權以製造的玩偶頭，至今已推出超過250種的玩偶造型。正如其品牌精神「Makes you smile」，PEZ以天然水果成分製成且不添加人工色素，搭配時下流行的玩偶頭，為消費者帶來無限樂趣！
+
+					figure.pic
+						img(src="../images/brand/agent-10-pro-1.jpg", alt="")
+						img(src="../images/brand/agent-10-pro-2.jpg", alt="")
+
+
+
+block extra_script

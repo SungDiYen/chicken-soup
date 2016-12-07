@@ -1,0 +1,37 @@
+extends ./../_layout.jade
+
+block p_title
+	title 產品資訊
+block extra_style
+	link(rel="stylesheet", href="../css/franchise.css")
+block main_content
+	.container-fluid.full_bg
+		section.intro.container
+			h1.headline
+				p.zh 產品資訊
+				p.en Franchise
+			h2.slogan
+				img(src="../images/slogan.png", alt="")
+	.container.back
+		button.btn.hidden-md-down(onclick='history.back()') 
+			i.fa(class='fa-chevron-left' aria-hidden='true')
+			span 回上一頁
+	article.container.article-wrap
+		.row
+			.col-md-4.col-sm-12
+				figure.brand_logo
+					img(src="../images/brand/agent-13.png", alt="")
+			.col-md-8.col-sm-12
+				section.article
+					h3.title Ten Kate
+					p.para
+						|Ten Kate Vetten bv 公司 由Ten Kate 家族 於1920 年在荷蘭成立, 已有95 年的歷史, 如今已是歐洲知名豬油大廠之一所有豬隻來於歐盟國家，屠宰場等都是經過歐盟嚴格把關，脂肪採用精良的豬背和豬肚油，使用水蒸式提煉法製作高品質頂級豬油。工廠擁有多項工廠認證及食品實驗室嚴格把關。
+
+
+					figure.pic
+						img(src="../images/brand/agent-13-pro-1.jpg", alt="")
+						img(src="../images/brand/agent-13-pro-2.png", alt="")
+
+
+
+block extra_script

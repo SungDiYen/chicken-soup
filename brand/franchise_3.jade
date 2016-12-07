@@ -1,0 +1,35 @@
+extends ./../_layout.jade
+
+block p_title
+	title 產品資訊
+block extra_style
+	link(rel="stylesheet", href="../css/franchise.css")
+block main_content
+	.container-fluid.full_bg
+		section.intro.container
+			h1.headline
+				p.zh 產品資訊
+				p.en Franchise
+			h2.slogan
+				img(src="../images/slogan.png", alt="")
+	.container.back
+		button.btn.hidden-md-down(onclick='history.back()') 
+			i.fa(class='fa-chevron-left' aria-hidden='true')
+			span 回上一頁
+	article.container.article-wrap
+		.row
+			.col-md-4.col-sm-12
+				figure.brand_logo
+					img(src="../images/brand/agent-3.png", alt="")
+			.col-md-8.col-sm-12
+				section.article
+					h3.title 嘉寶
+					p.para
+						|嘉寶嬰兒食品享譽全球超過八十年，是美國第一大，銷售第一 的嬰幼兒食品品牌。<br>
+						|嘉寶於2007年加入雀巢家族，兩家公司利用合併的專業的知識，研究和建立一種系統性的創新作法，可根據孩子的發展階段選擇合適的營養副食品。<br>
+						|嘉寶所有產品均符合美國食品及藥物管理局(FDA)的標準，採用天然材料烹製，絕無人造色素、人造調味料或防腐劑，深受世界各地父母信賴。
+
+					//-figure.pic
+						img(src="../images/brand/agent-3-pro.jpg", alt="")
+
+block extra_script

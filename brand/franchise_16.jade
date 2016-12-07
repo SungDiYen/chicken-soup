@@ -1,0 +1,38 @@
+extends ./../_layout.jade
+
+block p_title
+	title 產品資訊
+block extra_style
+	link(rel="stylesheet", href="../css/franchise.css")
+block main_content
+	.container-fluid.full_bg
+		section.intro.container
+			h1.headline
+				p.zh 產品資訊
+				p.en Franchise
+			h2.slogan
+				img(src="../images/slogan.png", alt="")
+	.container.back
+		button.btn.hidden-md-down(onclick='history.back()') 
+			i.fa(class='fa-chevron-left' aria-hidden='true')
+			span 回上一頁
+	article.container.article-wrap
+		.row
+			.col-md-4.col-sm-12
+				figure.brand_logo
+					img(src="../images/brand/agent-16.png", alt="")
+					img(src="../images/brand/agent-33.png", alt="")
+					img(src="../images/brand/agent-5.png", alt="")
+			.col-md-8.col-sm-12
+				section.article
+					h3.title 金寶湯、普格、史雲生
+					p.para
+						|經歷超過一個世紀，金寶湯創造了備受全球愛戴的湯品系列，並成為了享譽國際的湯品名牌。其紅白設計的品牌形像，亦在世界各地顧客心中留下了深刻的印象。在香港，每年均有數以億罐的金寶湯售出，產品亦成為了本地零售巿場的湯品主流。<br>
+						|家傳戶曉的「金寶湯」濃縮湯，除了是方便美味的熱湯外，更可以成為滋味易煮的家常餸菜。快搜尋www.campbellskitchen.com.hk，內有多款由「金寶湯」煮成的菜式，給你煮菜新靈感！
+
+					figure.pic
+						img(src="../images/brand/agent-16-pro.jpg", alt="")
+
+
+
+block extra_script

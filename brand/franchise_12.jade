@@ -1,0 +1,34 @@
+extends ./../_layout.jade
+
+block p_title
+	title 產品資訊
+block extra_style
+	link(rel="stylesheet", href="../css/franchise.css")
+block main_content
+	.container-fluid.full_bg
+		section.intro.container
+			h1.headline
+				p.zh 產品資訊
+				p.en Franchise
+			h2.slogan
+				img(src="../images/slogan.png", alt="")
+	.container.back
+		button.btn.hidden-md-down(onclick='history.back()') 
+			i.fa(class='fa-chevron-left' aria-hidden='true')
+			span 回上一頁
+	article.container.article-wrap
+		.row
+			.col-md-4.col-sm-12
+				figure.brand_logo
+					img(src="../images/brand/agent-12.png", alt="")
+			.col-md-8.col-sm-12
+				section.article
+					h3.title kievit
+					p.para
+						|荷蘭皇家菲仕蘭Kievit公司致力於優質功能性食品配料供應，贏得了世界知名飲料和食品品牌的廣泛信任。我們立足於全球發展和消費趨勢，力爭通過不斷創新提供絕佳原料。<br>
+						|Kievit聚焦於優質咖啡和茶飲的應用市場，為廣大客戶提供奶精和發泡奶精等多元產品組合。我們的原料應用潛能巨大。我們與客戶精誠合作，針對每種特定的市場、應用和技術打造定制化解決方案。卓越的產品和服務質量是Kievit在客戶眼中最值得讚賞的價值所在。依託其百餘年的行業經驗，Kievit公司在乳化、噴霧乾燥、微膠囊包埋技術方面成為業界公認的專家，始終如一為客戶提供最好的原料。
+
+					figure.pic
+						img(src="../images/brand/agent-12-pro.jpg", alt="")
+
+block extra_script

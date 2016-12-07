@@ -1,0 +1,32 @@
+extends ./../_layout.jade
+
+block p_title
+	title THL 最新消息
+block extra_style
+	link(rel="stylesheet", href="../css/news.css")
+block main_content
+	.container.main
+		.row
+			.col-lg-8.offset-lg-2
+				.article
+					.caption 新聞／News
+					h1.headline TABASCO峇里島會議 五感火辣之夜
+					figure.image
+						img(src="../images/news_event/news_01.jpg", alt="")
+					p.para 美國知名調味料品牌TABASCO於2016年5月25日至28日招開亞洲區會議，地點選在度假勝地峇里島的保護神廣場Wisnu Plaza，會議由TABASCO第七代傳人總裁董事會主席Tony Simmons主持，欣臨企業副總經理陳德仁與夫人連袂出席參與這場盛會。成立於1868年的TABASCO辣椒醬，是風靡世界的知名辣醬，於今年5月委由欣臨企業代理進口。為期三天的會議舉辦了「豐收派對」及「味覺實驗室」兩場主題晚宴，透過豐收派對及味覺實驗的試吃品嚐及知性遊戲活動，搭配精緻的料理與動人音樂，完整呈現出TABASCO多層次火辣五感味覺。
+			.col-lg-8.offset-lg-2
+				.extra
+					h4.title 最新消息 Lastest News
+					.row
+						mixin other_news(link, image, title, date)
+							.col-lg-4
+								a.block.news(href=link+'.html')
+									figure.image
+										img(src="../images/news_event/"+image+".jpg", alt="")
+									.info
+										h5.title= title
+										span.date= date
+						+other_news('news_02', 'news_02', '嬌聯日本總社長高原豪久 拜訪欣新網總部', '2016.05.10')
+						+other_news('news_03', 'news_03', '2016世界廚王台北爭霸賽 御用指定李錦記醬料', '2016.05.10')
+						+other_news('news_04', 'news_04', '欣新網跨足寵物產業', '2016.05.10')
+block extra_script

@@ -1,0 +1,36 @@
+extends ./../_layout.jade
+
+block p_title
+	title 產品資訊
+block extra_style
+	link(rel="stylesheet", href="../css/franchise.css")
+block main_content
+	.container-fluid.full_bg
+		section.intro.container
+			h1.headline
+				p.zh 產品資訊
+				p.en Franchise
+			h2.slogan
+				img(src="../images/slogan.png", alt="")
+	.container.back
+		button.btn.hidden-md-down(onclick='history.back()') 
+			i.fa(class='fa-chevron-left' aria-hidden='true')
+			span 回上一頁
+	article.container.article-wrap
+		.row
+			.col-md-4.col-sm-12
+				figure.brand_logo
+					img(src="../images/brand/agent-6.png", alt="")
+			.col-md-8.col-sm-12
+				section.article
+					h3.title S. Pellegrino & Acqua Panna礦泉水
+					p.para
+						| S.Pellegrino-聖沛黎洛天然氣泡礦泉水:<br>全球80%米其林餐廳廚師指定用水,產自義大利米蘭北方70公里San pellegrino小鎮，水源經過阿爾卑斯山山脈30年過濾,首次裝瓶年份1899年，為超過百年的經典品牌, 口感清爽、氣泡細緻被眾多廚師、美食家譽為最佳佐餐水，適合與重口味食物、高酒精濃度酒款搭配
+					p.para
+						|Acqua Panna-普娜天然礦泉水:<br>被侍酒師譽為最佳佐酒水, 口感柔滑順口，產自義大利南方，位於托斯卡尼地區，水源經過15年沉澱與過濾, 次裝瓶年份為1564年，迄今超過400年的歷史在文藝復興時期為義大利貴族-梅迪奇家族專用水，今天使用的Logo是梅迪奇家族的家鰴，是朵純淨百合花的象徵
+
+					figure.pic
+						img(src="../images/brand/agent-6-pro.jpg", alt="")
+
+
+block extra_script

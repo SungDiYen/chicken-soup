@@ -1,0 +1,33 @@
+extends ./../_layout.jade
+
+block p_title
+	title 產品資訊
+block extra_style
+	link(rel="stylesheet", href="../css/franchise.css")
+block main_content
+	.container-fluid.full_bg
+		section.intro.container
+			h1.headline
+				p.zh 產品資訊
+				p.en Franchise
+			h2.slogan
+				img(src="../images/slogan.png", alt="")
+	.container.back
+		button.btn.hidden-md-down(onclick='history.back()') 
+			i.fa(class='fa-chevron-left' aria-hidden='true')
+			span 回上一頁
+	article.container.article-wrap
+		.row
+			.col-md-4.col-sm-12
+				figure.brand_logo
+					img(src="../images/brand/agent-9.png", alt="")
+			.col-md-8.col-sm-12
+				section.article
+					h3.title 阿華田
+					p.para
+						|歷經110年 全球超過50多個國家家庭的最愛
+						|1904年由瑞士Dr. Wander專為當時歐洲嚴重的營養失調問題所調製營養麥芽配方到全世界知名的品牌，歷經110年，阿華田的營養及香濃的美味，陪伴一個又一個世代的成長。
+					figure.pic
+						img(src="../images/brand/agent-9-pro.jpg", alt="")
+
+block extra_script

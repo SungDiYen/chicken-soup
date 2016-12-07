@@ -1,0 +1,35 @@
+extends ./../_layout.jade
+
+block p_title
+	title 產品資訊
+block extra_style
+	link(rel="stylesheet", href="../css/franchise.css")
+block main_content
+	.container-fluid.full_bg
+		section.intro.container
+			h1.headline
+				p.zh 產品資訊
+				p.en Franchise
+			h2.slogan
+				img(src="../images/slogan.png", alt="")
+	.container.back
+		button.btn.hidden-md-down(onclick='history.back()') 
+			i.fa(class='fa-chevron-left' aria-hidden='true')
+			span 回上一頁
+	article.container.article-wrap
+		.row
+			.col-md-4.col-sm-12
+				figure.brand_logo
+					img(src="../images/brand/agent-30.png", alt="")
+			.col-md-8.col-sm-12
+				section.article
+					h3.title SANTAGATA
+					p.para
+						|SANTAGATA 創立於1907年，歷經5代傳承，乃義大利百年歷史家族油廠，累積對橄欖和製作橄欖油的豐富經驗及知識並與一群橄欖農夫契作，使用現代化的生產技術，經國家級的品質測試團隊嚴格把關，加上逐批品管檢驗，確保每滴SANTAGATA橄欖油都是高品質且令客戶滿意。<br>
+						|SANTAGATA為世界連鎖五星級飯店、米其林餐廳主廚指定使用品牌。
+
+					figure.pic
+						img(src="../images/brand/agent-30-pro.jpg", alt="")
+
+
+block extra_script

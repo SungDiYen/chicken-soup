@@ -1,0 +1,33 @@
+extends ./../_layout.jade
+
+block p_title
+	title 產品資訊
+block extra_style
+	link(rel="stylesheet", href="../css/franchise.css")
+block main_content
+	.container-fluid.full_bg
+		section.intro.container
+			h1.headline
+				p.zh 產品資訊
+				p.en Franchise
+			h2.slogan
+				img(src="../images/slogan.png", alt="")
+	.container.back
+		button.btn.hidden-md-down(onclick='history.back()') 
+			i.fa(class='fa-chevron-left' aria-hidden='true')
+			span 回上一頁
+	article.container.article-wrap
+		.row
+			.col-md-4.col-sm-12
+				figure.brand_logo
+					img(src="../images/brand/agent-14.jpg", alt="")
+			.col-md-8.col-sm-12
+				section.article
+					h3.title 百味來
+					p.para.
+						「140年的家族傳承品牌百味來的故事發源於1877年的義大利小鎮帕爾馬(Parma)，創始人Pietro Barilla Senior 從一家販 售麵包和義大利麵的小商店開啟百味來的百年故事。百味來至今由家族經營，產品在全球100多個國家銷售，堅持「提供自己孩子也會吃的最好的食品」<br>
+						百味來今日已成為世界著名的食品集團，全球義大利麵領導品牌 百味來深信─食物給人帶來的不只是感官享受，還是一門藝術 藉由百味來義大利麵與麵醬等產品，體驗最純正美好的義大利美食文化 我們熱誠的推廣義大利的美食、文化與藝術，並深切憧憬著人們認同百味來傳承140年的價值觀─對生活的熱情、對品質的追求，以及對傳統的尊重。」#[a(href="http://www.ilovepasta.com.tw/dispPageBox/ctw.aspx?ddsPageID=ABOUT") 官方網站]
+					figure.pic
+						img(src="../images/brand/agent-14-pro.jpg", alt="")
+
+block extra_script

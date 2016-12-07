@@ -6416,9 +6416,8 @@ figure {
 }
 
 body {
-  background-image: url('../images/../images/inside_bg.png?1465962443');
+  background-image: url('../images/../images/inside_bg.jpg?1481093451');
   background-repeat: repeat;
-  background-size: cover;
 }
 body > .header, body > .footer {
   background: #fff;
@@ -6445,7 +6444,7 @@ body > .header .nav-link:hover i.fa, body > .footer .nav-link:hover i.fa {
 }
 body > .header {
   border-top: 2px solid #d6001c;
-  padding: 15px 0;
+  padding: 20px 0;
 }
 body > .header .container {
   display: -webkit-flex;
@@ -6457,6 +6456,9 @@ body > .header .container {
   position: relative;
   z-index: 10;
   background: #fff;
+}
+body > .header .logo {
+  padding: 0;
 }
 body > .header .logo .navbar-brand {
   width: 190px;
@@ -6631,6 +6633,10 @@ hr.divider {
   margin-bottom: 60px;
 }
 
+.modal .modal-footer .btn + .btn {
+  margin-left: 10px;
+}
+
 main {
   background: #d6001c;
 }
@@ -6649,7 +6655,7 @@ main {
 .article + .article {
   margin-top: 50px;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 120px;
 }
 @media (max-width: 576px) {
   .article {

@@ -1,0 +1,35 @@
+extends ./../_layout.jade
+
+block p_title
+	title 產品資訊
+block extra_style
+	link(rel="stylesheet", href="../css/franchise.css")
+block main_content
+	.container-fluid.full_bg
+		section.intro.container
+			h1.headline
+				p.zh 產品資訊
+				p.en Franchise
+			h2.slogan
+				img(src="../images/slogan.png", alt="")
+	.container.back
+		button.btn.hidden-md-down(onclick='history.back()') 
+			i.fa(class='fa-chevron-left' aria-hidden='true')
+			span 回上一頁
+	article.container.article-wrap
+		.row
+			.col-md-4.col-sm-12
+				figure.brand_logo
+					img(src="../images/brand/agent-22.png", alt="")
+			.col-md-8.col-sm-12
+				section.article
+					h3.title 黑白淡奶 沖出正宗港式奶茶
+					p.para
+						|黑白淡奶以100%新鮮牛奶製成，選用荷蘭自設農場的優質黑白乳牛品種(Frisian Cow)，即便是飼料亦通過ISO9002和HACCP認證，嚴守優良品質，七十年來始終如一。<br>
+						|正宗標準的港式奶茶，必須添加擁有足夠乳脂濃度的牛奶，因此唯有使用真正由鮮奶濃縮而成的”黑白淡奶”， 才能達到港式奶茶，口感馥郁細膩又充滿厚度的口感標準，是正統茶餐廳師傅必備原料。
+
+					figure.pic
+						img(src="../images/brand/agent-22-pro-1.jpg", alt="")
+						img(src="../images/brand/agent-22-pro-2.jpg", alt="")
+
+block extra_script
