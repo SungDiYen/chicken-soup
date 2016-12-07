@@ -3,7 +3,7 @@ extends ./_layout.jade
 block p_title
 	title 產品資訊
 block extra_style
-	link(rel="stylesheet", href="css/franchise.css")
+	link(rel="stylesheet", href="/css/franchise.css")
 block main_content
 	.container-fluid.full_bg
 		section.intro.container
@@ -11,7 +11,7 @@ block main_content
 				p.zh 產品資訊
 				p.en Franchise
 			h2.slogan
-				img(src="images/slogan.png", alt="")
+				img(src="/images/slogan.png", alt="")
 	.container.back
 		button.btn.hidden-md-down(onclick='history.back()') 
 			i.fa(class='fa-chevron-left' aria-hidden='true')
@@ -20,7 +20,7 @@ block main_content
 		.row
 			.col-md-4.col-sm-12
 				figure.brand_logo
-					img(src="images/insdie_logo.jpg", alt="")
+					img(src="/images/insdie_logo.jpg", alt="")
 			.col-md-8.col-sm-12
 				section.article
 					h3.title HEINZ 亨氏
@@ -29,6 +29,6 @@ block main_content
 					p.para.
 						其中亨氏旗艦產品「亨氏番茄醬」，100%純天然，世界銷售第一，每年熱銷超過6億5千萬瓶。亨氏每年生產的小袋裝番茄醬多達110億包， 相當於全球每人2包。 「亨氏就是番茄醬」更為全世界的人們津津樂道。
 					figure.pic
-						img(src="images/inside_img.jpg", alt="")
+						img(src="/images/inside_img.jpg", alt="")
 
 block extra_script
