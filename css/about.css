@@ -6489,6 +6489,7 @@ body > .header .navbar.desktop .navbar-nav .nav-item .nav-link {
 body > .header .navbar.desktop .navbar-nav .nav-item .nav-link.facebook {
   font-size: 0.875rem;
   color: #3b5998;
+  margin-left: 30px;
 }
 body > .header .navbar.desktop .navbar-nav .nav-item .nav-link.facebook .fa {
   color: inherit;
@@ -6862,6 +6863,7 @@ main {
 .row > .color-up {
   background: #dedfdf;
   margin-top: 20px;
+  padding-bottom: 40px;
 }
 .row > .color-up .section .title {
   color: #d6001c;

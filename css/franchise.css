@@ -6488,6 +6488,7 @@ body > .header .navbar.desktop .navbar-nav .nav-item .nav-link {
 body > .header .navbar.desktop .navbar-nav .nav-item .nav-link.facebook {
   font-size: 0.875rem;
   color: #3b5998;
+  margin-left: 30px;
 }
 body > .header .navbar.desktop .navbar-nav .nav-item .nav-link.facebook .fa {
   color: inherit;
@@ -6954,6 +6955,7 @@ hr.divider {
 .channel-wrap {
   padding: 15px 20px;
   border: 1px solid #d6001c;
+  height: 100%;
 }
 
 .channel {
