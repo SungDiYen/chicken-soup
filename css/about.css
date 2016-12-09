@@ -6476,16 +6476,15 @@ body > .header .logo .navbar-brand img {
     width: 160px;
   }
 }
+body > .header .navbar.desktop .navbar-nav {
+  display: inline-block;
+}
 body > .header .navbar.desktop .navbar-nav .nav-item + .nav-item {
   margin-left: 20px;
 }
 body > .header .navbar.desktop .navbar-nav .nav-item .nav-link {
-  font-size: 1.125rem;
-}
-@media (min-width: 992px) {
-  body > .header .navbar.desktop .navbar-nav .nav-item .nav-link {
-    font-size: 1rem;
-  }
+  height: 40px;
+  font-size: 1rem;
 }
 body > .header .navbar.desktop .navbar-nav .nav-item .nav-link.facebook {
   font-size: 0.875rem;
@@ -6493,6 +6492,32 @@ body > .header .navbar.desktop .navbar-nav .nav-item .nav-link.facebook {
 }
 body > .header .navbar.desktop .navbar-nav .nav-item .nav-link.facebook .fa {
   color: inherit;
+}
+@media (min-width: 992px) {
+  body > .header .navbar.desktop .navbar-nav.function {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+  }
+  body > .header .navbar.desktop .navbar-nav.function .nav-link {
+    color: #454749;
+  }
+  body > .header .navbar.desktop .navbar-nav.function .nav-link i.fa {
+    color: #d6001c;
+  }
+}
+@media (min-width: 1200px) {
+  body > .header .navbar.desktop .navbar-nav.function {
+    background: #d6001c;
+    border-radius: 25px;
+    padding: 0 20px;
+  }
+  body > .header .navbar.desktop .navbar-nav.function .nav-link {
+    color: #fff;
+  }
+  body > .header .navbar.desktop .navbar-nav.function .nav-link i.fa {
+    color: #fff;
+  }
 }
 body > .header .navbar-toggler {
   background: transparent;
@@ -6739,6 +6764,9 @@ main {
     line-height: 1.7;
   }
 }
+.section .image {
+  padding: 10px;
+}
 .section .image img {
   width: 100%;
 }
@@ -6752,7 +6780,7 @@ main {
   text-shadow: 1px 0px 0px #666;
 }
 .section .image.dis {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 .section.main .para {
   position: relative;
@@ -6829,4 +6857,18 @@ main {
 
 .map {
   margin-top: 180px;
+}
+
+.row > .color-up {
+  background: #dedfdf;
+  margin-top: 20px;
+}
+.row > .color-up .section .title {
+  color: #d6001c;
+}
+.row > .color-up .section .title:after {
+  background: #d6001c;
+}
+.row > .color-up .section .para {
+  color: #7b7b7b;
 }

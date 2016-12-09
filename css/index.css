@@ -6475,16 +6475,15 @@ body > .header .logo .navbar-brand img {
     width: 160px;
   }
 }
+body > .header .navbar.desktop .navbar-nav {
+  display: inline-block;
+}
 body > .header .navbar.desktop .navbar-nav .nav-item + .nav-item {
   margin-left: 20px;
 }
 body > .header .navbar.desktop .navbar-nav .nav-item .nav-link {
-  font-size: 1.125rem;
-}
-@media (min-width: 992px) {
-  body > .header .navbar.desktop .navbar-nav .nav-item .nav-link {
-    font-size: 1rem;
-  }
+  height: 40px;
+  font-size: 1rem;
 }
 body > .header .navbar.desktop .navbar-nav .nav-item .nav-link.facebook {
   font-size: 0.875rem;
@@ -6492,6 +6491,32 @@ body > .header .navbar.desktop .navbar-nav .nav-item .nav-link.facebook {
 }
 body > .header .navbar.desktop .navbar-nav .nav-item .nav-link.facebook .fa {
   color: inherit;
+}
+@media (min-width: 992px) {
+  body > .header .navbar.desktop .navbar-nav.function {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+  }
+  body > .header .navbar.desktop .navbar-nav.function .nav-link {
+    color: #454749;
+  }
+  body > .header .navbar.desktop .navbar-nav.function .nav-link i.fa {
+    color: #d6001c;
+  }
+}
+@media (min-width: 1200px) {
+  body > .header .navbar.desktop .navbar-nav.function {
+    background: #d6001c;
+    border-radius: 25px;
+    padding: 0 20px;
+  }
+  body > .header .navbar.desktop .navbar-nav.function .nav-link {
+    color: #fff;
+  }
+  body > .header .navbar.desktop .navbar-nav.function .nav-link i.fa {
+    color: #fff;
+  }
 }
 body > .header .navbar-toggler {
   background: transparent;

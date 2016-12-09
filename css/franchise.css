@@ -6475,16 +6475,15 @@ body > .header .logo .navbar-brand img {
     width: 160px;
   }
 }
+body > .header .navbar.desktop .navbar-nav {
+  display: inline-block;
+}
 body > .header .navbar.desktop .navbar-nav .nav-item + .nav-item {
   margin-left: 20px;
 }
 body > .header .navbar.desktop .navbar-nav .nav-item .nav-link {
-  font-size: 1.125rem;
-}
-@media (min-width: 992px) {
-  body > .header .navbar.desktop .navbar-nav .nav-item .nav-link {
-    font-size: 1rem;
-  }
+  height: 40px;
+  font-size: 1rem;
 }
 body > .header .navbar.desktop .navbar-nav .nav-item .nav-link.facebook {
   font-size: 0.875rem;
@@ -6492,6 +6491,32 @@ body > .header .navbar.desktop .navbar-nav .nav-item .nav-link.facebook {
 }
 body > .header .navbar.desktop .navbar-nav .nav-item .nav-link.facebook .fa {
   color: inherit;
+}
+@media (min-width: 992px) {
+  body > .header .navbar.desktop .navbar-nav.function {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+  }
+  body > .header .navbar.desktop .navbar-nav.function .nav-link {
+    color: #454749;
+  }
+  body > .header .navbar.desktop .navbar-nav.function .nav-link i.fa {
+    color: #d6001c;
+  }
+}
+@media (min-width: 1200px) {
+  body > .header .navbar.desktop .navbar-nav.function {
+    background: #d6001c;
+    border-radius: 25px;
+    padding: 0 20px;
+  }
+  body > .header .navbar.desktop .navbar-nav.function .nav-link {
+    color: #fff;
+  }
+  body > .header .navbar.desktop .navbar-nav.function .nav-link i.fa {
+    color: #fff;
+  }
 }
 body > .header .navbar-toggler {
   background: transparent;
@@ -6903,6 +6928,7 @@ hr.divider {
   left: 0;
   right: 0;
   margin: auto;
+  padding: 10px;
 }
 @media (max-width: 576px) {
   .logo_list .logo {
@@ -6923,6 +6949,11 @@ hr.divider {
   .logo_list .logo {
     width: calc(100% / 8);
   }
+}
+
+.channel-wrap {
+  padding: 15px 20px;
+  border: 1px solid #d6001c;
 }
 
 .channel {
@@ -6977,15 +7008,24 @@ hr.divider {
   margin-top: 20px;
 }
 .channel-list .title {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: 700;
   color: #231916;
-}
-.channel-list .title p {
-  font-size: 1rem;
+  border-bottom: 1px solid #454749;
 }
 .channel-list .title + .title {
   margin-top: 20px;
+}
+.channel-list .details {
+  font-size: 1.5rem;
+  color: #231916;
+  padding-top: 10px;
+}
+.channel-list .details p {
+  margin: 0;
+}
+.channel-list .details + .title {
+  margin-top: 40px;
 }
 .channel-list .images .image {
   float: left;

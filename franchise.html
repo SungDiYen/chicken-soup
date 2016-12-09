@@ -40,7 +40,7 @@
       <div class="container">
         <nav class="navbar logo"><a href="http://www.thl.com.tw/" class="navbar-brand"><img src="/images/logo.svg"></a></nav>
         <nav class="navbar desktop hidden-md-down">
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav function clearfix">
             <li class="nav-item"><a href="/about.html" class="nav-link"> <i aria-hidden="true" class="fa fa-chevron-right"></i><span>關於欣臨</span></a></li>
             <li class="nav-item"><a href="/news_event.html" class="nav-link"><i aria-hidden="true" class="fa fa-chevron-right"></i><span>最新消息</span></a></li>
             <li class="nav-item"><a href="/franchise.html" class="nav-link"><i aria-hidden="true" class="fa fa-chevron-right"></i><span>產品資訊</span></a></li>
@@ -48,6 +48,8 @@
             <li class="nav-item">
               <button type="button" data-toggle="modal" data-target="#contact_modal" class="nav-link btn js-contact"> <i aria-hidden="true" class="fa fa-chevron-right"></i><span>聯絡我們</span></button>
             </li>
+          </ul>
+          <ul class="social nav navbar-nav clearfix">
             <li class="nav-item"><a href="https://www.facebook.com/twhsinlin/" target="_blank" class="nav-link facebook"> <i aria-hidden="true" class="fa fa-facebook-official"></i><span>Facebook</span></a></li>
           </ul>
         </nav>
@@ -75,7 +77,7 @@
         <section class="intro container">
           <h1 class="headline">
             <p class="zh">產品資訊</p>
-            <p class="en">Franchise</p>
+            <p class="en">Brand</p>
           </h1>
           <h2 class="slogan"><img src="/images/slogan_en.svg" alt=""></h2>
         </section>
@@ -137,15 +139,14 @@
               <li data-myorder="1" class="mix logo food"><a href="/brand/franchise_32.html"><img src="images/brand/agent-32.png" alt=""></a></li>
               <li data-myorder="1" class="mix logo food"><a href="/brand/franchise_33.html"><img src="images/brand/agent-33.png" alt=""></a></li>
               <li data-myorder="1" class="mix logo house"><a href="/brand/franchise_34.html"><img src="images/brand/agent-34.png" alt=""></a></li>
-              <li data-myorder="1" class="mix logo house"><a href="/brand/franchise_36.html"><img src="images/brand/agent-36.png" alt=""></a></li>
-              <li data-myorder="1" class="mix logo drink"><a href="/brand/franchise_37.html"><img src="images/brand/agent-37.png" alt=""></a></li>
-              <li data-myorder="1" class="mix logo hair"><a href="/brand/franchise_38.html"><img src="images/brand/agent-38.png" alt=""></a></li>
-              <li data-myorder="1" class="mix logo house"><a href="/brand/franchise_39.html"><img src="images/brand/agent-39.png" alt=""></a></li>
-              <li data-myorder="1" class="mix logo food"><a href="/brand/franchise_40.html"><img src="images/brand/agent-40.png" alt=""></a></li>
-              <li data-myorder="1" class="mix logo house"><a href="/brand/franchise_41.html"><img src="images/brand/agent-41.png" alt=""></a></li>
-              <li data-myorder="1" class="mix logo hair"><a href="/brand/franchise_42.html"><img src="images/brand/agent-42.png" alt=""></a></li>
-              <li data-myorder="1" class="mix logo drink"><a href="/brand/franchise_43.html"><img src="images/brand/agent-43.png" alt=""></a></li>
-              <li data-myorder="1" class="mix logo food"><a href="/brand/franchise_44.html"><img src="images/brand/agent-44.png" alt=""></a></li>
+              <li data-myorder="1" class="mix logo house"><a href="/brand/franchise_37.html"><img src="images/brand/agent-37.png" alt=""></a></li>
+              <li data-myorder="1" class="mix logo drink"><a href="/brand/franchise_38.html"><img src="images/brand/agent-38.png" alt=""></a></li>
+              <li data-myorder="1" class="mix logo hair"><a href="/brand/franchise_39.html"><img src="images/brand/agent-39.png" alt=""></a></li>
+              <li data-myorder="1" class="mix logo house"><a href="/brand/franchise_40.html"><img src="images/brand/agent-40.png" alt=""></a></li>
+              <li data-myorder="1" class="mix logo food"><a href="/brand/franchise_41.html"><img src="images/brand/agent-41.png" alt=""></a></li>
+              <li data-myorder="1" class="mix logo house"><a href="/brand/franchise_42.html"><img src="images/brand/agent-42.png" alt=""></a></li>
+              <li data-myorder="1" class="mix logo hair"><a href="/brand/franchise_43.html"><img src="images/brand/agent-43.png" alt=""></a></li>
+              <li data-myorder="1" class="mix logo drink"><a href="/brand/franchise_44.html"><img src="images/brand/agent-44.png" alt=""></a></li>
               <li data-myorder="1" class="mix logo food"><a href="/brand/franchise_45.html"><img src="images/brand/agent-45.png" alt=""></a></li>
               <li data-myorder="1" class="mix logo food"><a href="/brand/franchise_46.html"><img src="images/brand/agent-46.png" alt=""></a></li>
               <li data-myorder="1" class="mix logo food"><a href="/brand/franchise_47.html"><img src="images/brand/agent-47.png" alt=""></a></li>
@@ -163,50 +164,60 @@
           <div class="content">
             <div class="row">
               <div class="col-md-5 offset-md-1 col-sm-5 offset-sm-1 col-xs-12">
-                <div class="channel">
-                  <figure class="image"><img src="images/c_2.jpg" alt=""></figure>
-                  <h4 class="eesay">
-                    <p class="zh">實體通路</p>
-                    <p class="en">offline</p>
-                  </h4>
+                <div class="channel-wrap">
+                  <div class="channel">
+                    <figure class="image"><img src="images/c_2.jpg" alt=""></figure>
+                    <h4 class="eesay">
+                      <p class="zh">實體通路</p>
+                      <p class="en">offline</p>
+                    </h4>
+                  </div>
+                  <ul class="channel-list">
+                    <li class="title">精品百貨：
+                    </li>
+                    <li class="details images clearfix">
+                      <ul class="details">
+                        <li class="image"><img src="images/channel/sogo.png"></li>
+                        <li class="image"><img src="images/channel/shin.png"></li>
+                      </ul>
+                    </li>
+                    <li class="title">實體通路：</li>
+                    <li class="details">
+                      <p>便利超商、藥局、各大賣場、五金百貨</p>
+                    </li>
+                  </ul>
                 </div>
-                <ul class="channel-list">
-                  <li class="title">精品百貨：
-                    <ul class="images clearfix">
-                      <li class="image"><img src="images/channel/sogo.png"></li>
-                      <li class="image"><img src="images/channel/shin.png"></li>
-                    </ul>
-                  </li>
-                  <li class="title">實體通路：
-                    <p>便利超商、藥局、各大賣場、五金百貨</p>
-                  </li>
-                </ul>
               </div>
               <div class="col-md-5 col-sm-5 col-xs-12">
-                <div class="channel">
-                  <figure class="image"><img src="images/c_1.jpg" alt=""></figure>
-                  <h4 class="eesay">
-                    <p class="zh">虛擬通路</p>
-                    <p class="en">online</p>
-                  </h4>
+                <div class="channel-wrap">
+                  <div class="channel">
+                    <figure class="image"><img src="images/c_1.jpg" alt=""></figure>
+                    <h4 class="eesay">
+                      <p class="zh">虛擬通路</p>
+                      <p class="en">online</p>
+                    </h4>
+                  </div>
+                  <ul class="channel-list">
+                    <li class="title">網路平台：</li>
+                    <li class="details images clearfix">
+                      <ul class="details">
+                        <li class="image"><img src="images/channel/pc.png"></li>
+                        <li class="image"><img src="images/channel/yahoo.png"></li>
+                        <li class="image"><img src="images/channel/momo.png"></li>
+                        <li class="image"><img src="images/channel/7net.png"></li>
+                        <li class="image"><img src="images/channel/thl.png">
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="title">電視購物：</li>
+                    <li class="images clearfix">
+                      <ul class="details">
+                        <li class="image"><img src="images/channel/ehs.png"></li>
+                        <li class="image"><img src="images/channel/momo.png"></li>
+                      </ul>
+                    </li>
+                  </ul>
                 </div>
-                <ul class="channel-list">
-                  <li class="title">網路平台：
-                    <ul class="images clearfix">
-                      <li class="image"><img src="images/channel/pc.png"></li>
-                      <li class="image"><img src="images/channel/yahoo.png"></li>
-                      <li class="image"><img src="images/channel/momo.png"></li>
-                      <li class="image"><img src="images/channel/7net.png">
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="title">電視購物：
-                    <ul class="images clearfix">
-                      <li class="image"><img src="images/channel/ehs.png"></li>
-                      <li class="image"><img src="images/channel/momo.png"></li>
-                    </ul>
-                  </li>
-                </ul>
               </div>
               <div class="col-md-11 offset-md-1 col-sm-11 offset-sm-1">
                 <p class="para">
