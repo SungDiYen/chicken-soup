@@ -6876,17 +6876,20 @@ body {
   .time-wrap .time-slogan {
     width: 100%;
     padding: 0 1.25rem;
+    z-index: 2;
   }
 }
 @media (min-width: 768px) {
   .time-wrap .time-slogan {
     padding-left: 1rem;
     padding-right: 1rem;
+    z-index: 2;
   }
 }
 @media (min-width: 992px) {
   .time-wrap .time-slogan {
     width: 630px;
+    z-index: 8;
   }
 }
 @media (min-width: 1200px) {
