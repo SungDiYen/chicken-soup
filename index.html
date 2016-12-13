@@ -38,7 +38,10 @@
     <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
     <script src="/js/open_anime.js"></script>
     <script src="/js/anime_init.js"></script>
-    <script>$('body').addClass('opening')</script>
+    <script>
+      $('body').addClass('opening')
+      
+    </script>
   </head>
   <body>
     <header class="header">
@@ -271,29 +274,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.min.js"></script>
   <script src="/slick-master/slick/slick.js"></script>
   <script>
-    /*
-    var screen_width = $(window).width();
-    if(screen_width > 400 ) {
-    	init();
-    	var loadTime = 19200; 
-    	setTimeout(function(){
-    		$('body').removeClass('opening');
-    		$('#canvas, #_preload_div_').remove();
-    		$('.skip').remove();
-    	}, loadTime)
-    
-    	$('#skip_btn').click(function(){
-    		$('body').removeClass('opening');
-    		$('#canvas, #_preload_div_').remove();
-    		$('.skip').remove();
-    	})
-    }else {
-    	$('#_preload_div_').attr('style', 'width: 100%; height: 100vh;')
-    	//$('body').removeClass('opening');
-    	//$('#canvas, #_preload_div_').remove();
-    	//$('.skip').remove();
-    }
-    */
     init();
     	var loadTime = 19200; 
     	setTimeout(function(){
