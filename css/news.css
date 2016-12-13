@@ -6717,12 +6717,15 @@ hr.divider {
   margin-top: 1rem;
 }
 
-@media (max-width: 576px) {
-  .block-group {
-    display: initial;
-  }
+/*
+.block-group {
+	//@include display-flex;
+	//@include flex-flow(row wrap);
+	@include rwd(xs) {
+		display: initial;
+	}
 }
-
+*/
 .section-title {
   padding: 20px 15px;
   font-size: 1.75rem;
@@ -6731,8 +6734,7 @@ hr.divider {
 }
 
 .block.news {
-  -webkit-flex-flow: column wrap;
-  flex-flow: column wrap;
+  display: block;
   border: 0;
   padding: 0;
 }
