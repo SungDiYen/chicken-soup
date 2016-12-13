@@ -21,7 +21,7 @@ function handleComplete(evt) {
 	var preloaderDiv = document.getElementById("_preload_div_");
 	preloaderDiv.style.display = 'none';
 	canvas.style.display = 'block';
-	exportRoot = new lib._161128_開頭動畫_mv();
+	exportRoot = new lib._161213_開頭動畫_mv();
 	stage = new createjs.Stage(canvas);
 	stage.addChild(exportRoot);	
 	//Registers the "tick" event listener.
@@ -59,5 +59,5 @@ function handleComplete(evt) {
 			stage.scaleY = pRatio*sRatio;			
 			lastW = iw; lastH = ih; lastS = sRatio;		
 		}
-	})(true,'both',true,1);	
+	})(true,'both',true,2);	
 }
