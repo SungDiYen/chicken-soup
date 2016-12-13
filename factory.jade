@@ -1,0 +1,58 @@
+extends ./_layout.jade
+
+block p_title
+	title 廠商專區
+block extra_style
+	link(rel="stylesheet", href="/css/franchise.css")
+block main_content
+	.container-fluid.full_bg
+		section.intro.container
+			h1.headline
+				p.zh 廠商專區
+				p.en B2B
+			h2.slogan
+				img(src="/images/slogan_en.svg", alt="")
+	.container
+		section.intro.sec
+			header
+				h3.title
+					span.en News
+					span.zh 最新資訊
+			.chapter
+				h4.subtitle 
+					|關於貨款，我們提供下列三種付款方式:
+				ul.list
+					li
+						h5.title.red 線上刷卡
+						p 廠商專區中的訂購刷卡付款作業，欣臨企業是採用思遠資訊股份有限公司之iePay金流服務系統，您的重要資料欣臨將不會有所保留，完全透過iePay金流服務系統直接與國泰世華銀行進行刷卡付款之驗證交易，您可以安心使用線上刷卡交易之付款功能。每筆訂單之刷卡金額上限為 新台幣20,000元整。
+					li
+						h5.title.red 貨到付款
+						p 請您在宅配人員將貨品送達收貨地點的同時，請確認貨品與發票內容無誤後，簽收並請將訂購款項繳交宅配人員帶回。
+					li
+						h5.title.red 對帳(月結)
+						p 如您選擇依原客戶合約訂定之月結天數為交易付款條件時，本公司將統一於每月25日寄發對帳單與您對帳請款。
+		section.intro.sec
+			header
+				h3.title
+					span.en FAQ
+					span.zh 常見問題
+			.chapter
+				h4.subtitle 訂單事項
+				ul.list
+					li.quest Q1. 請問我訂購的商品何時會到貨?
+					li.ans
+						|A: 到貨日期是以您訂購下單的時間為標準。當日下午三點以前下單並完成付款，到貨日為次日；當日下午三點以後下單並完成付款，到貨日為兩天後。( 此到貨日不含 花東地區、離島地區之配送，遇周末假期、國定假日時，訂單將統一於#[span.em 次一上班日]處理。)
+					li.quest Q2. 如果下單之後還想修改訂單，我應該要怎麼做呢?
+					li.ans A: 廠商專區之訂單於付款完成即成立，如您要 修改或刪除 已訂購商品時，請洽詢我們的訂單組人員為您處理。如果您要新增訂購商品，建議針對新增訂購的商品直接下單訂購而不修改已完成訂單。
+					li.quest Q3. 到貨時如果發現商品不符，我該怎麼處理?
+					li.ans A: 建議客戶於商品到貨時與送貨人員對點商品是否無誤，如發現商品不符，請整批退回不予收貨。如有問題，您可洽詢所屬之欣臨負責業務人員處理。
+					li.quest Q4. 請問廠商專區的訂購付款方式有哪幾種選擇?
+					li.ans A: 本公司對於所有客戶都提供線上刷卡的付款功能，但依據合約簽訂的付款方式，我們會額外提供 月結或貨到付款 功能。
+					li.quest Q5. 如果收到的商品有瑕疵，我要怎麼退換貨?
+					li.ans
+						|A: 如有商品異常需要退換貨時，您可以連繫所屬欣臨負責業務人員處理，或請來電#[span.em 免付費客服專線：0800-095-555]、#[span.em 欣臨企業 (02)2506-7777]或#[a(href="mailto:b2b-service@thl.com.tw ") email：b2b-service@thl.com.tw]提出您的需求，本公司客服人員會儘快與您聯絡處理。
+				h4.subtitle 帳款相關
+				ul.list
+					li.quest Q1. 請問如果我訂購付款時選擇月結，貴公司會何時寄對帳單請款?
+					li.ans  A: 針對月結付款的客戶，本公司會統一於#[span.em 每月25日]寄發對帳單予客戶對帳請款。
+block extra_script

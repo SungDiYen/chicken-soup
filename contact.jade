@@ -1,0 +1,38 @@
+extends ./_layout.jade
+
+block p_title
+	title THL 欣臨
+block extra_style
+	link(rel="stylesheet", href="/slick-master/slick/slick.css")
+	//-link(rel="stylesheet", href="slick-master/slick/slick-theme.css")
+block main_content
+	.container
+		.row
+			.col-md-8.offset-md-2
+				.article
+					h3.headline 與我們聯絡
+					p.para
+						|欣臨企業於台北、台中、高雄皆設有公司據點，<br>歡迎您直接與我們聯絡，或在在線上留下您的寶貴的建議，欣臨將會於24小時內與您聯絡！謝謝
+					ul.list
+						li 欣臨企業台北總公司
+						li 地址：104 台北市南京東路三段70號4樓
+						li 電話：(02) 2506-7777
+						li 免付費客服專線: 0800-095-555 
+						li 傳真：(02)2517-0292 、 (02) 2506-0750
+				form.form
+					.form-group
+						label(for="#") 姓名
+						input(type='email' class='form-control' id="#" aria-describedby="emailHelp" placeholder="Enter email")
+					.form-group
+						label(for="#") 聯絡電話
+						input(type='tel' class='form-control' id="#" aria-describedby="emailHelp" value="0912345678")
+					.form-group
+						label(for="#") Email
+						input(type='email' class='form-control' id="#" aria-describedby="emailHelp" placeholder="")
+					.form-group
+						label(for="#") 內容
+						textarea(class='form-control' id="#" )
+					button(type='submit' class='btn btn-primary') 送出
+block extra_script
+	script.
+		

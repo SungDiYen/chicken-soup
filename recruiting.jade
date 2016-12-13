@@ -1,0 +1,39 @@
+extends ./_layout.jade
+
+block p_title
+	title 人才招募
+block extra_style
+	link(rel="stylesheet", href="/css/franchise.css")
+block main_content
+	.container-fluid.full_bg
+		section.intro.container
+			h1.headline
+				p.zh 人才招募
+				p.en Recruiting
+			h2.slogan
+				img(src="/images/slogan_en.svg", alt="")
+	.container
+		section.intro
+			p.para
+				|欣臨企業股份有限公司 (Taiwan Hsin Lin Enterprise Co., Ltd. ) 成立於1949年，為台灣消費性產品之專業代理商。在消費通路的經營上擁有超過30年以上的經驗與專業能力，本公司在業務及行銷人員的編制上更是有百餘位以上之專業人才為所代理的品牌來努力
+			p.para
+				|欣臨這些年穩定成長，隨著業務量拓展逐年遞增，更瞭解企業與員工間向心力的重要使命感，欣臨更珍惜員工對企業的努力，欣臨也是一個證明自己展現實力的絕佳舞台，若您有一顆熱誠、頂尖的學習能力、絕佳的專業技術，歡迎您加入欣臨這個大家庭！
+		section.list-wrap
+			h2.headline 職缺列表
+			div.recruit-wrap
+				script(src='http://www.104.com.tw/i/apis/qjob.cfm?c=383a436d385c3e6840323b1d1d1d1d5f24437323189j56&amp;fmt=8')
+				script.
+					b = new j104Widget({
+						"sc":"#555555",
+						"stc":"#0A1AF0",
+						"sw":"768px",//"550px",
+						"fs":"14px",
+						"fts":"16px",
+						"sh":"400px",//"375px",
+						"bc":"#FFFFFF",
+						"bs":"1px solid #cdcdcb"
+					});
+	
+					document.write(b.output());
+
+block extra_script

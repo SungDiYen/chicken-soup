@@ -1,0 +1,79 @@
+extends ./_layout.jade
+
+block p_title
+	title THL 最新消息
+block extra_style
+	link(rel="stylesheet", href="/css/news.css")
+block main_content
+	.container.main
+		.row
+			.col-lg-1.hidden-md-down
+				aside.aside-nav
+					ul.nav(id='nav_spy')
+						li.nav-item
+							a.nav-link(class='active', href='#section_news') News
+						li.nav-item
+							a.nav-link(class='', href='#section_event') Event
+			.section-wrap.col-lg-11.col-md-11.col-sm-12.col-xs-12
+				h3.section-title.hidden-lg-up News
+				.section.block-group(id='section_news')
+					.row
+						//-var newsList = [{title: '01_title', abstract: '01_content', date: '01', link: '1#', image: 'path'},{ title: '02_title',abstract: '02_content',date: '02', link: '#', image: 'path'},{title: '03_title',abstract: '03_content',date: '03', link: '#', image: 'path'},{title: '03_title',abstract: '03_content',date: '03', link: '#', image: 'path'},{title: '03_title',abstract: '03_content',date: '03', link: '#', image: 'path'}];
+						mixin article_block(link, image, title, abstract, time)
+							.col-lg-4.col-md-4.col-sm-6.col-xs-6 
+								a.block.news(href=link+'.html')
+									figure.image
+										img(src='images/news_event/'+image+'.jpg' , alt="")
+									.info
+										h5.title= title
+										p.abstract= abstract
+										span.date= date
+						//-for news in newsList
+						+article_block(
+							'/news_event/news_01', 
+							'news_01', 
+							'TABASCO峇里島會議 五感火辣之夜', 
+							'美國知名調味料品牌TABASCO於2016年5月25日至28日招開亞洲區會議，地點選在度假勝地峇里島的保護神廣場Wisnu Plaza，會議由TABASCO第七代傳人總裁董事會主席Tony ',
+							'2016.05.10')
+						+article_block(
+							'/news_event/news_02', 
+							'news_02',
+							'嬌聯日本總社長高原豪久拜訪欣新網總部',
+							'因應電子商務的蓬勃發展與快速成長，品牌對於電商的投資與重視程度也日益增加。嬌聯日本總社長高原豪久於2016年4月初訪台，並親自拜訪欣新網總部，針對過去一年將近兩倍成長的業績進行交流討論與分享，並且對於未來獨規商品、行銷資源的串聯，以及廣告資源的導流及整合，訂立未來的期望與發展。目前也已首次將嬌聯行銷部門加入會議，雙方交流互動更為深入，期望帶動品牌形象與業績的穩固成長！',
+							'2016.04.10')
+						+article_block(
+							'/news_event/news_03', 
+							'news_03',
+							'2016世界廚王台北爭霸賽 御用指定李錦記醬料',
+							'由台北市餐飲業職業工會主辦的2016世界廚王台北爭霸賽，於2016年6月11日至16日在台北正式展開，來自世界各地的中餐界領袖及各地名廚等近20個餐飲單位齊聚台灣﹐為中餐廚藝界打造一個優良的國際交流平台，李錦記為本屆賽事指定醬料供應商，為來自全球的參賽者提供最高質醬料。成立於1988年的李錦記，至今已有逾220種產品，並曾多次參與世界廚藝競賽、各大博覽會。16日在陽明山中山樓舉辦的頒獎晚會，由李錦記原廠台灣顧問陳可邦、鍾佳凌，協同欣臨的同仁夥伴們一起出席，現場並設有李錦記展示專區，透過詳盡的產品陳列介紹，完整傳遞了李錦記全系列產品精神。',
+							'2016.06.10')
+						+article_block(
+							'/news_event/news_04', 
+							'news_04',
+							'欣新網跨足寵物產業',
+							'欣新網自2016年5月起，正式跨足寵物產業！此次與嬌聯的合作，將原先的嬰兒紙尿褲、衛生棉及成人紙尿褲，擴展到寵物用品，開始銷售嬌聯消臭大師系列商品。同時，也與美商瑪氏簽訂合作合約，於9月份開始銷售美商瑪氏集團下的西莎、偉嘉等人氣商品。7月22日並舉辦「一日的寵物日」活動，讓大家帶自己的寵物陪同自己上班一天，當日的下午還舉辦了瑪氏寵物食品的產品教育訓練，除了深度介紹系列商品，瑪氏也帶來了豐富的寵物產品，當天的毛孩子們都吃得不亦樂乎，為合作展開了愉快的開端。',
+							'2016.05.05')
+						+article_block(
+							'/news_event/news_05', 
+							'news_05',
+							'Maybelline媚比琳與Durex杜蕾斯 成立網路官方旗艦店',
+							'隨著品牌電商趨勢的興起，越來越多品牌成立專屬網路官方旗艦店。欣新網除了既有的滿意寶寶Mamypoko、英國唐寧茶Twinings外，2016年3月正式與台灣萊雅開啟合作，於8月成立Maybelline媚比琳官方旗艦店，運用近期的彩妝潮流，推動多款媚比琳熱門上市的新品。此外，世界第一保險套品牌的Durex杜蕾斯，也在8月加入成立官方旗艦店行列，希望以直接面對消費者的溝通互動，將品牌的經營與業績更上一層樓！',
+							'2016.03.20')
+				hr.divider
+				h3.section-title.hidden-lg-up Event
+				.section.block-group(id='section_event')
+					.row
+						+article_block(
+							'/news_event/event_01', 
+							'event_1',
+							'荷蘭皇家菲仕蘭總部參訪',
+							'應荷蘭皇家菲仕蘭之邀，欣臨企業於2016年5月23日至29日前往荷蘭阿姆斯特丹總部參訪，參觀了位於阿姆斯特丹的大型牧場及位於比利時布魯塞爾保久乳工廠，深度觀察皇家菲仕蘭牛乳健康的生態環境及優質的的生產線。在皇家菲仕蘭，每個牧場主人都是股東，用優於市場的收價購購入生乳，訂定牛隻飼養規範，鼓勵酪農多讓乳牛們多去散散步吃吃草，定期有獸醫巡查檢疫，盡最大的能力提供乳牛一個健康舒適的生活環境，同時倡導友善環境與重視生態保護，在菲仕蘭的專業管理下與酪農們高度配合度中，才能不斷生產高優質的牛奶。',
+							'2016.05.20')
+block extra_script
+	script.
+		$(function(){
+			$('body').scrollspy({
+				target: '#nav_spy',
+				offset: 200
+			})
+		});

@@ -1,0 +1,312 @@
+@import 'compass',
+		'compass/reset',
+		'bootstrap4/bootstrap.scss';
+
+///// function /////
+$browser-default: 16;
+@function rem($px) {
+	@return $px / $browser-default * 1rem;
+}
+///// RWD /////
+
+@mixin rwd($device) {
+	@if $device == lg {
+		@media (min-width: 1200px){
+			@content;
+		}
+	}
+	@else if $device == md {
+		@media (min-width: 992px) {
+			@content;
+		}
+	}@else if $device == sm {
+		@media(min-width: 768px) {
+			@content;
+		}
+	}@else if $device == xs {
+		@media(max-width: 576px) {
+			@content;
+		}
+	}
+}
+
+///// color /////
+$red:	#d6001c;
+$gold:	#f0dbbf;
+$bk_0:  #000;
+$bk_1:	#231916;
+$bk_2:	#454749;
+$bk_3:  #7b7b7b;
+$bk_4:  #aaa;
+$facebook: #3b5998;
+
+/////
+
+a, button {
+	&:active, &:focus {
+		outline: none;
+		text-decoration: none;
+	}
+	&:hover {
+		text-decoration: none;
+	}
+}
+figure {
+	margin: 0;
+}
+/////
+body {
+	background: {
+		image: image-url('../images/inside_bg.jpg');
+		repeat: repeat;
+		//size: contain;
+	}
+	>.header, >.footer {
+		background: #fff;
+		.nav-link {
+			color: $bk_2;
+			transition: all .28s ease-in;
+			background: transparent;
+			padding: .425rem .25rem;
+			i.fa {
+				margin-right: 8px;
+				color: $red;
+				font-size: rem(16);
+				position: relative;
+				right: 0;
+				transition: all .2s ease-in;
+			}
+			&:hover {
+				color: $red;
+				i.fa {
+					right: -5px;
+				}
+			}
+		}
+	}
+	>.header {
+		border-top: 2px solid $red;
+		padding: 20px 0;
+		.container {
+			@include display-flex;
+			@include justify-content(space-between);
+			@include align-items(center);
+			position: relative;
+			z-index: 10;
+			background: #fff;
+		}
+		.logo {
+			padding: 0;
+			.navbar-brand {
+				width: 190px;
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+			@include rwd(xs) {
+				$padding: 1.25rem;
+				padding-top: 	$padding;
+				padding-bottom: $padding;
+				.navbar-brand {
+					width: 160px;
+				}
+			}
+		}
+		.navbar.desktop {
+			.navbar-nav {
+				display: inline-block;
+				.nav-item {
+					+.nav-item {
+						margin-left: 20px;
+					}
+					.nav-link {
+						height: 40px;
+						font-size: rem(16);
+						&.facebook {
+							font-size: rem(14);
+							color: $facebook;
+							margin-left: 30px;
+							.fa {
+								color: inherit;
+							}
+						}
+					}
+				}
+				&.function {
+					@include rwd(md) {
+						background: transparent;
+						padding: 0;
+						@include border-radius(0);
+						.nav-link {
+							color: $bk_2;
+							i.fa {
+								color: $red;
+							}
+							&:hover {
+
+							}
+						}
+					}
+					@include rwd(lg) {
+						background: $red;
+						@include border-radius(25px);
+						padding: 0 20px;
+						.nav-link {
+							color: #fff;
+							i.fa {
+								color: #fff;
+							}
+							&:hover {
+
+							}
+						}
+					}
+				}
+			}
+		}
+		.navbar-toggler {
+			background: transparent;
+			&:before, &:after {
+				content: '';
+				display: block;
+				height: 3px;
+				width: 24px;
+				background: #000;
+				position: relative;
+				transition: transform 300ms ease, top 250ms ease 300ms;
+			}
+			&:before {
+				top: -3px;
+			}
+			&:after {
+				top: 3px;
+			}
+			&.cross {
+				&:before {
+					transition: top 300ms ease,transform 450ms ease 300ms;
+					@include rotate(45deg);
+					top: 2px;
+				}
+				&:after {
+					transition: top 300ms ease,transform 450ms ease 300ms;
+					@include rotate(-45deg);
+					top: -1px;
+				}
+			}
+		}
+		.mobile_menu {
+			$mobile_H: 62px;
+			position: absolute;
+			z-index: -1;
+			top:  0;
+			left: 0;
+			width: 100%;
+			padding: .5rem .75rem;
+			background: rgba(#fff, .95);
+			text-align: center;
+			opacity: 0;
+			@include scaleY(0);
+			transition: opacity 350ms ease,
+						top 350ms ease,
+						z-index 100ms ease 350ms,
+						transform 300ms ease 350ms;
+			&.active {
+				top: $mobile_H;
+				opacity: 1;
+				z-index: 9;
+				@include scaleY(1);
+				transition: z-index 100ms ease,
+							opacity 350ms ease 100ms,
+							top 350ms ease 100ms,
+							transform 300ms ease;
+			}
+			li a, li button {
+				color: $bk_2;
+				font-size: rem(18);
+				display: block;
+				padding: 5px 15px;
+				background: transparent;
+				margin: auto;
+				i {
+					margin-right: 3px;
+				}
+			}
+		}
+		@include rwd(xs) {
+			position: fixed;
+			z-index: 3;
+			top: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+		}
+	}
+	main {
+		@include rwd(xs) {
+			margin-top: 80px;
+			position: relative;
+			z-index: 2;
+		}
+	}
+	>.footer {
+		color: $bk_2;
+		font-size: rem(14);
+		border-top: 2px solid $red;
+		padding: 40px 0;
+		.container {
+			>.row {
+				@include justify-content(space-between);
+			}
+		}
+		.nav-inline {
+			.nav-link {
+				font-size: inherit;
+				padding: 0;
+				line-height: 1;
+				border: 0;
+				vertical-align: baseline;
+			}
+		}
+		.copyright {
+			color: inherit;
+			font-size: inherit;
+			span {
+				+span {margin-left: 30px;}
+			}
+		}
+		@include rwd(xs) {
+			$padding: 1.25rem;
+			padding-top: $padding;
+			padding-bottom: $padding;
+			.nav-inline {
+				text-align: center;
+			}
+			.copyright {
+				@include rwd(xs) {
+					margin-top: .75rem;
+					margin-bottom: 0;
+					span {
+						display: block;
+						margin: 0;
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+}
+hr.divider {
+	border-color: $red;
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+.modal {
+	.modal-footer {
+		.btn {
+			+.btn {
+				margin-left: 10px;
+			}
+		}
+	}
+}
