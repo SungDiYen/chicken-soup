@@ -6717,12 +6717,6 @@ hr.divider {
   margin-top: 1rem;
 }
 
-.block-group {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-}
 @media (max-width: 576px) {
   .block-group {
     display: initial;
