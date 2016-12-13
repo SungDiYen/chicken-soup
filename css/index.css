@@ -6956,12 +6956,12 @@ body {
     margin-left: 4px;
   }
   .time-wrap .slick-dots li .year-indicator {
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
     padding-left: 2px;
     padding-right: 2px;
   }
   .time-wrap .slick-dots li:after {
-    content: '||';
+    content: '|';
     font-weight: 400;
     letter-spacing: 2px;
     right: -8px;
