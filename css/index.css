@@ -6957,8 +6957,8 @@ body {
   }
   .time-wrap .slick-dots li .year-indicator {
     font-size: 0.8125rem;
-    padding-left: 3px;
-    padding-right: 3px;
+    padding-left: 2px;
+    padding-right: 2px;
   }
   .time-wrap .slick-dots li:after {
     content: '||';
