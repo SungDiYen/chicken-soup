@@ -6952,8 +6952,8 @@ body {
 }
 @media (max-width: 576px) {
   .time-wrap .slick-dots li {
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-right: 4px;
+    margin-left: 4px;
   }
   .time-wrap .slick-dots li .year-indicator {
     font-size: 0.8125rem;
