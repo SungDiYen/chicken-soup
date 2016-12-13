@@ -6603,7 +6603,7 @@ body > .header .mobile_menu li a i, body > .header .mobile_menu li button i {
 }
 @media (min-width: 768px) {
   body > .header {
-    padding: 0;
+    padding: 10px 0;
   }
 }
 @media (min-width: 992px) {

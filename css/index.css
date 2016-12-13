@@ -6603,7 +6603,7 @@ body > .header .mobile_menu li a i, body > .header .mobile_menu li button i {
 }
 @media (min-width: 768px) {
   body > .header {
-    padding: 0;
+    padding: 10px 0;
   }
 }
 @media (min-width: 992px) {
@@ -6881,7 +6881,6 @@ body {
 }
 @media (min-width: 768px) {
   .time-wrap .time-slogan {
-    width: 100%;
     padding-left: 1rem;
     padding-right: 1rem;
   }

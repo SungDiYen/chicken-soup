@@ -92,19 +92,47 @@
           <div class="recruit-wrap">
             <script src="http://www.104.com.tw/i/apis/qjob.cfm?c=383a436d385c3e6840323b1d1d1d1d5f24437323189j56&amp;amp;fmt=8"></script>
             <script>
-              b = new j104Widget({
-              	"sc":"#555555",
-              	"stc":"#0A1AF0",
-              	"sw":"768px",//"550px",
-              	"fs":"14px",
-              	"fts":"16px",
-              	"sh":"400px",//"375px",
-              	"bc":"#FFFFFF",
-              	"bs":"1px solid #cdcdcb"
-              });
-              
-              document.write(b.output());
-              
+              var screen_width = $(window).width();
+              if(screen_width > 768) {
+              	b = new j104Widget({
+              		"sc":"#555555",
+              		"stc":"#0A1AF0",
+              		"sw":"768px",//"550px",
+              		"fs":"14px",
+              		"fts":"16px",
+              		"sh":"400px",//"375px",
+              		"bc":"#FFFFFF",
+              		"bs":"1px solid #cdcdcb"
+              	});
+              	document.write(b.output());
+              }
+              else if(screen_width <= 768, screen_width > 400) {
+              	b = new j104Widget({
+              		"sc":"#555555",
+              		"stc":"#0A1AF0",
+              		"sw":"640px",//"550px",
+              		"fs":"14px",
+              		"fts":"16px",
+              		"sh":"400px",//"375px",
+              		"bc":"#FFFFFF",
+              		"bs":"1px solid #cdcdcb"
+              	});
+              	document.write(b.output());
+              	console.log('md')
+              }else if (screen_width <= 400) {
+              	b = new j104Widget({
+              		"sc":"#555555",
+              		"stc":"#0A1AF0",
+              		"sw":"340px",//"550px",
+              		"fs":"14px",
+              		"fts":"16px",
+              		"sh":"400px",//"375px",
+              		"bc":"#FFFFFF",
+              		"bs":"1px solid #cdcdcb"
+              	});
+              	document.write(b.output());
+              	console.log('sm')
+              }
             </script>
           </div>
         </section>
