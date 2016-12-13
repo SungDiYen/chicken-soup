@@ -6598,6 +6598,17 @@ body > .header .mobile_menu li a i, body > .header .mobile_menu li button i {
     left: 0;
     right: 0;
     width: 100%;
+    padding: 0;
+  }
+}
+@media (min-width: 768px) {
+  body > .header {
+    padding: 0;
+  }
+}
+@media (min-width: 992px) {
+  body > .header {
+    padding: 20px 0;
   }
 }
 @media (max-width: 576px) {
@@ -6688,6 +6699,16 @@ hr.divider {
 }
 .brand_wall .brand:hover {
   border-color: #d6001c;
+}
+@media (max-width: 576px) {
+  .brand_wall .brand {
+    padding: 5px;
+  }
+}
+@media (min-width: 768px) {
+  .brand_wall .brand {
+    padding: 20px;
+  }
 }
 
 hr.divider {

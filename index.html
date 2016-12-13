@@ -271,20 +271,29 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.min.js"></script>
   <script src="/slick-master/slick/slick.js"></script>
   <script>
-    init();
-    var loadTime = 19200; 
-    //var loadTime = 2000; 
-    setTimeout(function(){
-    	$('body').removeClass('opening');
-    	$('#canvas, #_preload_div_').remove();
-    	$('.skip').remove();
-    }, loadTime)
+    var screen_width = $(window).width();
+    if(screen_width > 767) {
+    	init();
+    	console.log('dew')
+    	var loadTime = 19200; 
+    	setTimeout(function(){
+    		$('body').removeClass('opening');
+    		$('#canvas, #_preload_div_').remove();
+    		$('.skip').remove();
+    	}, loadTime)
     
-    $('#skip_btn').click(function(){
+    	$('#skip_btn').click(function(){
+    		$('body').removeClass('opening');
+    		$('#canvas, #_preload_div_').remove();
+    		$('.skip').remove();
+    	})
+    }else {
     	$('body').removeClass('opening');
     	$('#canvas, #_preload_div_').remove();
     	$('.skip').remove();
-    })
+    }
+    
+    
     $(function(){
     	$('.time-slick').slick({
     		slidesToShow: 3,

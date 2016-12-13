@@ -6598,6 +6598,17 @@ body > .header .mobile_menu li a i, body > .header .mobile_menu li button i {
     left: 0;
     right: 0;
     width: 100%;
+    padding: 0;
+  }
+}
+@media (min-width: 768px) {
+  body > .header {
+    padding: 0;
+  }
+}
+@media (min-width: 992px) {
+  body > .header {
+    padding: 20px 0;
   }
 }
 @media (max-width: 576px) {
@@ -6689,6 +6700,16 @@ hr.divider {
 .brand_wall .brand:hover {
   border-color: #d6001c;
 }
+@media (max-width: 576px) {
+  .brand_wall .brand {
+    padding: 5px;
+  }
+}
+@media (min-width: 768px) {
+  .brand_wall .brand {
+    padding: 20px;
+  }
+}
 
 .full_bg {
   background-image: url('../images/../images/section_bg.jpg?1478570786');
@@ -6721,7 +6742,6 @@ hr.divider {
 @media (max-width: 576px) {
   .intro.container {
     padding: 25px 10px;
-    margin-top: 120px;
   }
 }
 @media (min-width: 768px) {
@@ -6775,6 +6795,11 @@ hr.divider {
 .intro .chapter {
   padding-left: 4rem;
   margin-top: -1rem;
+}
+@media (max-width: 576px) {
+  .intro .chapter {
+    padding-left: 0;
+  }
 }
 .intro .list {
   margin-bottom: 60px;
@@ -6934,6 +6959,7 @@ hr.divider {
 @media (max-width: 576px) {
   .logo_list .logo {
     width: calc(100% / 3);
+    padding: 0;
   }
 }
 @media (min-width: 768px) {
@@ -6956,6 +6982,12 @@ hr.divider {
   padding: 15px 20px;
   border: 1px solid #d6001c;
   height: 100%;
+}
+@media (max-width: 576px) {
+  .channel-wrap {
+    border: 0;
+    padding: 20px 0;
+  }
 }
 
 .channel {

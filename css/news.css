@@ -6598,6 +6598,17 @@ body > .header .mobile_menu li a i, body > .header .mobile_menu li button i {
     left: 0;
     right: 0;
     width: 100%;
+    padding: 0;
+  }
+}
+@media (min-width: 768px) {
+  body > .header {
+    padding: 0;
+  }
+}
+@media (min-width: 992px) {
+  body > .header {
+    padding: 20px 0;
   }
 }
 @media (max-width: 576px) {
@@ -6712,6 +6723,11 @@ hr.divider {
   display: flex;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
+}
+@media (max-width: 576px) {
+  .block-group {
+    display: initial;
+  }
 }
 
 .section-title {

@@ -6599,6 +6599,17 @@ body > .header .mobile_menu li a i, body > .header .mobile_menu li button i {
     left: 0;
     right: 0;
     width: 100%;
+    padding: 0;
+  }
+}
+@media (min-width: 768px) {
+  body > .header {
+    padding: 0;
+  }
+}
+@media (min-width: 992px) {
+  body > .header {
+    padding: 20px 0;
   }
 }
 @media (max-width: 576px) {
@@ -6873,4 +6884,18 @@ main {
 }
 .row > .color-up .section .para {
   color: #7b7b7b;
+}
+@media (max-width: 576px) {
+  .row > .color-up {
+    background: transparent;
+  }
+  .row > .color-up .section .title {
+    color: #fff;
+  }
+  .row > .color-up .section .title:after {
+    background: #d6001c;
+  }
+  .row > .color-up .section .para {
+    color: #fff;
+  }
 }
