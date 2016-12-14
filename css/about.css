@@ -6669,6 +6669,9 @@ hr.divider {
   margin-bottom: 60px;
 }
 
+.modal .modal-footer {
+  text-align: center;
+}
 .modal .modal-footer .btn + .btn {
   margin-left: 10px;
 }
