@@ -111,14 +111,14 @@
               </div></a></div>
           <div class="right-side col-md-6 col-sm-12 col-xs-12">
             <div class="row">
-              <div class="col-md-12"><a href="/news_event/bs_01.html" class="block horz">
-                  <figure class="image"><img src="/images/news_event/bs_01.jpg" alt=""></figure>
+              <div class="col-md-12"><a data-toggle="modal" data-target="#video_modal" class="block horz btn playVideo">
+                  <figure class="image"><img src="/images/video/cover.png" alt=""></figure>
                   <div class="essay">
-                    <h5 class="sort"> <span class="text">Brand Story</span></h5>
-                    <div class="date">2016.11.22</div>
-                    <h3 class="headline">利口樂　滋潤你我的人生</h3>
-                    <p class="abstract">有稜有角的外型、溫潤色澤透著光芒，伴隨入口後，在舌尖漫出的草本芬芳。來自瑞士的利口樂，由欣臨代理於1970年代引進台灣，滋潤你我的人生42年！</p>
-                  </div></a></div>
+                    <h5 class="sort"> <span class="text">Video</span></h5>
+                    <div class="date">2016.12.15</div>
+                    <h3 class="headline">強效去漬 要有碧蓮</h3>
+                  </div></a>
+              </div>
               <div class="col-md-12"><a href="/news_event/bs_02.html" class="block horz">
                   <figure class="image"><img src="/images/news_event/bs_02.jpg" alt=""></figure>
                   <div class="essay">
@@ -222,6 +222,20 @@
             <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_51.html" class="brand"><img src="/images/brand/agent-51.png" alt=""></a></div>
           </div>
         </section>
+      </div>
+      <div id="video_modal" tavindex="-1" role="dialog" class="modal fade">
+        <div role="document" class="modal-dialog">
+          <div style="background: transparent; border: 0; width: 720px;" class="modal-content">
+            <div style="border: 0;" class="modal-header">
+              <button type="button" data-dismiss="modal" aria-label="close" style="color: #fff; opacity: 1" class="close closeVideo"><span aria-hidden="true" style="position: relative; right: -30px;">&times;</span></button>
+              <div class="modal-body">
+                <video width="100%" controls id="videoCpntainer">
+                  <source src="images/video/vanish.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <footer class="footer">
@@ -338,6 +352,22 @@
     			}
     		]
     	});
+    })
+    
+    
+    var video = document.getElementById("videoCpntainer");
+    function stopVideo(){
+        video.pause();
+        video.currentTime = 0;
+    }
+    function playVideo(){
+    	video.play();
+    }
+    $('.closeVideo, #video_modal').on('click', function(){
+    	stopVideo();
+    })
+    $('.playVideo').on('click', function(){
+    	playVideo();
     })
   </script>
 </html>

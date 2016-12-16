@@ -6778,6 +6778,9 @@ hr.divider {
 .block .image img {
   width: 100%;
 }
+.block .essay {
+  text-align: left;
+}
 .block .essay .date {
   color: #7b7b7b;
   font-size: 0.875rem;
