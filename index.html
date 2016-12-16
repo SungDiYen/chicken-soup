@@ -31,7 +31,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
     <link rel="shortcut icon" type="image/png" href="/favicon.ico"><!--[if lt IE 9]><!-->
     <link rel="stylesheet" href=""><!--<![endif]-->
-    <!--[if lt IE 10]><!-->
+<!--[if lt IE 10]><!-->
     <link rel="stylesheet" href=""><!--<![endif]-->
     <link rel="stylesheet" href="/slick-master/slick/slick.css">
     <link rel="stylesheet" href="/css/open_anime.css">
@@ -46,46 +46,46 @@
   <body>
     <header class="header">
       <div class="container">
-        <nav class="navbar logo"><a href="http://www.thl.com.tw/" class="navbar-brand"><img src="/images/logo.svg"></a></nav>
+        <nav class="navbar logo"><a class="navbar-brand" href="http://www.thl.com.tw/"><img src="/images/logo.svg"></a></nav>
         <nav class="navbar desktop hidden-md-down">
           <ul class="nav navbar-nav function clearfix">
-            <li class="nav-item"><a href="/about.html" class="nav-link"> <i aria-hidden="true" class="fa fa-chevron-right"></i><span>關於欣臨</span></a></li>
-            <li class="nav-item"><a href="/news_event.html" class="nav-link"><i aria-hidden="true" class="fa fa-chevron-right"></i><span>最新消息</span></a></li>
-            <li class="nav-item"><a href="/franchise.html" class="nav-link"><i aria-hidden="true" class="fa fa-chevron-right"></i><span>產品資訊</span></a></li>
-            <li class="nav-item"><a href="http://www.hhgalaxy.com.tw/" target="_blank" class="nav-link"><i aria-hidden="true" class="fa fa-chevron-right"></i><span>購物商城</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="/about.html"> <i class="fa fa-chevron-right" aria-hidden="true"></i><span>關於欣臨</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="/news_event.html"><i class="fa fa-chevron-right" aria-hidden="true"></i><span>最新消息</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="/franchise.html"><i class="fa fa-chevron-right" aria-hidden="true"></i><span>產品資訊</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="http://www.hhgalaxy.com.tw/" target="_blank"><i class="fa fa-chevron-right" aria-hidden="true"></i><span>購物商城</span></a></li>
             <li class="nav-item">
-              <button type="button" data-toggle="modal" data-target="#contact_modal" class="nav-link btn js-contact"> <i aria-hidden="true" class="fa fa-chevron-right"></i><span>聯絡我們</span></button>
+              <button class="nav-link btn js-contact" type="button" data-toggle="modal" data-target="#contact_modal"> <i class="fa fa-chevron-right" aria-hidden="true"></i><span>聯絡我們</span></button>
             </li>
           </ul>
           <ul class="social nav navbar-nav clearfix">
-            <li class="nav-item"><a href="https://www.facebook.com/twhsinlin/" target="_blank" class="nav-link facebook"> <i aria-hidden="true" class="fa fa-facebook-official"></i><span>Facebook</span></a></li>
+            <li class="nav-item"><a class="nav-link facebook" href="https://www.facebook.com/twhsinlin/" target="_blank"> <i class="fa fa-facebook-official" aria-hidden="true"></i><span>Facebook</span></a></li>
           </ul>
         </nav>
         <nav class="navbar hidden-lg-up">
-          <button type="button" class="navbar-toggler"></button>
+          <button class="navbar-toggler" type="button"></button>
         </nav>
       </div>
-      <div id="mobile_menu" class="mobile_menu hidden-lg-up">
+      <div class="mobile_menu hidden-lg-up" id="mobile_menu">
         <div class="collapse-menu navbar-toggleable-md">
           <ul class="nav navbar-nav mobile">
-            <li class="nav-item"><a href="/about.html"> <i aria-hidden="true" class="fa fa-chevron-right"> </i><span>關於欣臨</span></a></li>
-            <li class="nav-item"><a href="/news_event.html"> <i aria-hidden="true" class="fa fa-chevron-right"></i><span>最新消息</span></a></li>
-            <li class="nav-item"><a href="/franchise.html"> <i aria-hidden="true" class="fa fa-chevron-right"></i><span>產品資訊</span></a></li>
-            <li class="nav-item"><a href="http://www.hhgalaxy.com.tw/" target="_blank"> <i aria-hidden="true" class="fa fa-chevron-right"></i><span>購物商城</span></a></li>
+            <li class="nav-item"><a href="/about.html"> <i class="fa fa-chevron-right" aria-hidden="true"> </i><span>關於欣臨</span></a></li>
+            <li class="nav-item"><a href="/news_event.html"> <i class="fa fa-chevron-right" aria-hidden="true"></i><span>最新消息</span></a></li>
+            <li class="nav-item"><a href="/franchise.html"> <i class="fa fa-chevron-right" aria-hidden="true"></i><span>產品資訊</span></a></li>
+            <li class="nav-item"><a href="http://www.hhgalaxy.com.tw/" target="_blank"> <i class="fa fa-chevron-right" aria-hidden="true"></i><span>購物商城</span></a></li>
             <li class="nav-item">
-              <button type="button" data-toggle="modal" data-target="#contact_modal" class="btn js-contact"><i aria-hidden="true" class="fa fa-chevron-right"></i><span>聯絡我們</span></button>
+              <button class="btn js-contact" type="button" data-toggle="modal" data-target="#contact_modal"><i class="fa fa-chevron-right" aria-hidden="true"></i><span>聯絡我們</span></button>
             </li>
-            <li class="nav-item"><a href="https://www.facebook.com/twhsinlin/" target="_blank" class="nav-link facebook">Facebook</a></li>
+            <li class="nav-item"><a class="nav-link facebook" href="https://www.facebook.com/twhsinlin/" target="_blank">Facebook</a></li>
           </ul>
         </div>
       </div>
     </header>
     <main>
-      <canvas id="canvas" width="1920" height="1080" style="display: none; background-color:rgba(255, 255, 255, 1.00); position: fixed; z-index: 999;"></canvas>
+      <canvas id="canvas" width="1920" height="1080" style="display: none; background-color:rgba(255, 255, 255, 1.00); position: fixed; z-index: 999"></canvas>
       <div class="skip">
-        <button id="skip_btn" type="button" class="skip_btn">直接進入</button>
+        <button class="skip_btn" id="skip_btn" type="button">直接進入</button>
       </div>
-      <div id="_preload_div_" style="display: inline-block; height:1280px; width: 1920px; vertical-align=middle;position:absolute;text-align: center;"><span style="display: inline-block; height: 100%; vertical-align: middle;"></span><img src="/images/_preloader.gif" style="vertical-align: middle; max-height: 100%"></div>
+      <div id="_preload_div_" style="display: inline-block; height:1280px; width: 1920px; vertical-align=middle;position:absolute;text-align: center"><span style="display: inline-block; height: 100%; vertical-align: middle"></span><img src="/images/_preloader.gif" style="vertical-align: middle; max-height: 100%"></div>
       <div class="time-wrap">
         <div class="time-slogan"> 
           <figure class="image"><img src="/images/index_slogan.svg" alt=""></figure>
@@ -101,7 +101,7 @@
       </div>
       <div class="container">
         <div class="row vert_stretch">
-          <div class="col-md-6 col-sm-12 col-xs-12"><a href="/news_event/event_01.html" class="block vert">
+          <div class="col-md-6 col-sm-12 col-xs-12"><a class="block vert" href="/news_event/event_01.html">
               <h5 class="sort"><span class="text">Event</span></h5>
               <figure class="image"><img src="/images/news_event/event_1.jpg" alt=""></figure>
               <div class="essay">
@@ -111,15 +111,14 @@
               </div></a></div>
           <div class="right-side col-md-6 col-sm-12 col-xs-12">
             <div class="row">
-              <div class="col-md-12"><a data-toggle="modal" data-target="#video_modal" class="block horz btn playVideo">
+              <div class="col-md-12"><a class="block horz btn playVideo" data-toggle="modal" data-target="#video_modal">
                   <figure class="image playBtnCon"><img src="/images/video/cover.png" alt=""><span class="playBtn"></span></figure>
                   <div class="essay">
                     <h5 class="sort"> <span class="text">Video</span></h5>
                     <div class="date">2016.12.15</div>
                     <h3 class="headline">強效去漬 要有碧蓮</h3>
-                  </div></a>
-              </div>
-              <div class="col-md-12"><a href="/news_event/bs_02.html" class="block horz">
+                  </div></a></div>
+              <div class="col-md-12"><a class="block horz" href="/news_event/bs_02.html">
                   <figure class="image"><img src="/images/news_event/bs_02.jpg" alt=""></figure>
                   <div class="essay">
                     <h5 class="sort"><span class="text">Brand Story</span></h5>
@@ -131,7 +130,7 @@
           </div>
         </div>
         <div class="row vert_stretch">
-          <div class="col-lg col-md-6 col-sm-6 col-xs-6"><a href="/news_event/news_01.html" class="block vert">
+          <div class="col-lg col-md-6 col-sm-6 col-xs-6"><a class="block vert" href="/news_event/news_01.html">
               <h5 class="sort"><span class="text">News</span></h5>
               <figure class="image"><img src="/images/news_event/news_01.jpg" alt=""></figure>
               <div class="essay">
@@ -139,7 +138,7 @@
                 <h3 class="headline">TABASCO峇里島會議 五感火辣之夜</h3>
                 <p class="abstract">美國知名調味料品牌TABASCO於2016年5月25日至28日招開亞洲區會議，地點選在度假勝地峇里島的保護神廣場Wisnu Plaza，會議由TABASCO第七代傳人總裁董事會主席Tony Simmons主持，欣臨企業副總經理陳德仁與夫人連袂出席參與這場盛會。成立於1868年的TABASCO辣椒醬，是風靡世界的知名辣醬，於今年5月委由欣臨企業代理進口。為期三天的會議舉辦了「豐收派對」及「味覺實驗室」兩場主題晚宴，透過豐收派對及味覺實驗的試吃品嚐及知性遊戲活動，搭配精緻的料理與動人音樂，完整呈現出TABASCO多層次火辣五感味覺。</p>
               </div></a></div>
-          <div class="col-lg col-md-6 col-sm-6 col-xs-6"><a href="/news_event/news_02.html" class="block vert">
+          <div class="col-lg col-md-6 col-sm-6 col-xs-6"><a class="block vert" href="/news_event/news_02.html">
               <h5 class="sort"><span class="text">News</span></h5>
               <figure class="image"><img src="/images/news_event/news_02.jpg" alt=""></figure>
               <div class="essay">
@@ -147,18 +146,16 @@
                 <h3 class="headline">嬌聯日本總社長高原豪久 拜訪欣新網總部</h3>
                 <p class="abstract">因應電子商務的蓬勃發展與快速成長，品牌對於電商的投資與重視程度也日益增加。嬌聯日本總社長高原豪久於2016年4月初訪台，並親自拜訪欣新網總部，針對過去一年將近兩倍成長的業績進行交流討論與分享，並且對於未來獨規商品、行銷資源的串聯，以及廣告資源的導流及整合，訂立未來的期望與發展。目前也已首次將嬌聯行銷部門加入會議，雙方交流互動更為深入，期望帶動品牌形象與業績的穩固成長！</p>
               </div></a></div>
-          <div class="col-lg col-md-6 col-sm-6 col-xs-6"><a href="/news_event/news_03.html" class="block vert">
+          <div class="col-lg col-md-6 col-sm-6 col-xs-6"><a class="block vert" href="/news_event/news_03.html">
               <h5 class="sort"><span class="text">News</span></h5>
               <figure class="image"><img src="/images/news_event/news_03.jpg" alt=""></figure>
               <div class="essay">
                 <div class="date">2016.06.10</div>
                 <h3 class="headline">2016世界廚王台北爭霸賽  御用指定李錦記醬料</h3>
                 <p class="abstract">
-                   
-                  由台北市餐飲業職業工會主辦的2016世界廚王台北爭霸賽，於2016年6月11日至16日在台北正式展開，來自世界各地的中餐界領袖及各地名廚等近20個餐飲單位齊聚台灣﹐為中餐廚藝界打造一個優良的國際交流平台，李錦記為本屆賽事指定醬料供應商，為來自全球的參賽者提供最高質醬料。成立於1988年的李錦記，至今已有逾220種產品，並曾多次參與世界廚藝競賽、各大博覽會。16日在陽明山中山樓舉辦的頒獎晚會，由李錦記原廠台灣顧問陳可邦、鍾佳凌，協同欣臨的同仁夥伴們一起出席，現場並設有李錦記展示專區，透過詳盡的產品陳列介紹，完整傳遞了李錦記全系列產品精神。
-                </p>
+                   由台北市餐飲業職業工會主辦的2016世界廚王台北爭霸賽，於2016年6月11日至16日在台北正式展開，來自世界各地的中餐界領袖及各地名廚等近20個餐飲單位齊聚台灣﹐為中餐廚藝界打造一個優良的國際交流平台，李錦記為本屆賽事指定醬料供應商，為來自全球的參賽者提供最高質醬料。成立於1988年的李錦記，至今已有逾220種產品，並曾多次參與世界廚藝競賽、各大博覽會。16日在陽明山中山樓舉辦的頒獎晚會，由李錦記原廠台灣顧問陳可邦、鍾佳凌，協同欣臨的同仁夥伴們一起出席，現場並設有李錦記展示專區，透過詳盡的產品陳列介紹，完整傳遞了李錦記全系列產品精神。</p>
               </div></a></div>
-          <div class="col-lg col-md-6 col-sm-6 col-xs-6"><a href="/news_event/news_04.html" class="block vert">
+          <div class="col-lg col-md-6 col-sm-6 col-xs-6"><a class="block vert" href="/news_event/news_04.html">
               <h5 class="sort"><span class="text">News</span></h5>
               <figure class="image"><img src="/images/news_event/news_04.jpg" alt=""></figure>
               <div class="essay">
@@ -166,7 +163,7 @@
                 <h3 class="headline">欣新網跨足寵物產業</h3>
                 <p class="abstract">欣新網自2016年5月起，正式跨足寵物產業！此次與嬌聯的合作，將原先的嬰兒紙尿褲、衛生棉及成人紙尿褲，擴展到寵物用品，開始銷售嬌聯消臭大師系列商品。同時，也與美商瑪氏簽訂合作合約，於9月份開始銷售美商瑪氏集團下的西莎、偉嘉等人氣商品。7月22日並舉辦「一日的寵物日」活動，讓大家帶自己的寵物陪同自己上班一天，當日的下午還舉辦了瑪氏寵物食品的產品教育訓練，除了深度介紹系列商品，瑪氏也帶來了豐富的寵物產品，當天的毛孩子們都吃得不亦樂乎，為合作展開了愉快的開端。</p>
               </div></a></div>
-          <div class="col-lg col-md-6 col-sm-6 col-xs-6"><a href="/news_event/news_05.html" class="block vert">
+          <div class="col-lg col-md-6 col-sm-6 col-xs-6"><a class="block vert" href="/news_event/news_05.html">
               <h5 class="sort"><span class="text">News</span></h5>
               <figure class="image"><img src="/images/news_event/news_05.jpg" alt=""></figure>
               <div class="essay">
@@ -179,55 +176,55 @@
         <section class="brand_wall">
           <h3 class="title">台灣總代理 / Sole Agent</h3>
           <div class="row">
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_1.html" class="brand"><img src="/images/brand/agent-1.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_2.html" class="brand"><img src="/images/brand/agent-2.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_3.html" class="brand"><img src="/images/brand/agent-3.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_4.html" class="brand"><img src="/images/brand/agent-4.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_5.html" class="brand"><img src="/images/brand/agent-5.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_6.html" class="brand"><img src="/images/brand/agent-6.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_8.html" class="brand"><img src="/images/brand/agent-8.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_9.html" class="brand"><img src="/images/brand/agent-9.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_10.html" class="brand"><img src="/images/brand/agent-10.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_11.html" class="brand"><img src="/images/brand/agent-11.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_12.html" class="brand"><img src="/images/brand/agent-12.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_13.html" class="brand"><img src="/images/brand/agent-13.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_14.html" class="brand"><img src="/images/brand/agent-14.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_16.html" class="brand"><img src="/images/brand/agent-16.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_17.html" class="brand"><img src="/images/brand/agent-17.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_18.html" class="brand"><img src="/images/brand/agent-18.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_19.html" class="brand"><img src="/images/brand/agent-19.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_21.html" class="brand"><img src="/images/brand/agent-21.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_22.html" class="brand"><img src="/images/brand/agent-22.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_24.html" class="brand"><img src="/images/brand/agent-24.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_26.html" class="brand"><img src="/images/brand/agent-26.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_27.html" class="brand"><img src="/images/brand/agent-27.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_30.html" class="brand"><img src="/images/brand/agent-30.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_31.html" class="brand"><img src="/images/brand/agent-31.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_32.html" class="brand"><img src="/images/brand/agent-32.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_33.html" class="brand"><img src="/images/brand/agent-33.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_34.html" class="brand"><img src="/images/brand/agent-34.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_37.html" class="brand"><img src="/images/brand/agent-37.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_38.html" class="brand"><img src="/images/brand/agent-38.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_39.html" class="brand"><img src="/images/brand/agent-39.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_40.html" class="brand"><img src="/images/brand/agent-40.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_41.html" class="brand"><img src="/images/brand/agent-41.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_42.html" class="brand"><img src="/images/brand/agent-42.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_43.html" class="brand"><img src="/images/brand/agent-43.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_44.html" class="brand"><img src="/images/brand/agent-44.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_45.html" class="brand"><img src="/images/brand/agent-45.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_46.html" class="brand"><img src="/images/brand/agent-46.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_47.html" class="brand"><img src="/images/brand/agent-47.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_48.html" class="brand"><img src="/images/brand/agent-48.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_49.html" class="brand"><img src="/images/brand/agent-49.png" alt=""></a></div>
-            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a href="/brand/franchise_51.html" class="brand"><img src="/images/brand/agent-51.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_1.html"><img src="/images/brand/agent-1.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_2.html"><img src="/images/brand/agent-2.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_3.html"><img src="/images/brand/agent-3.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_4.html"><img src="/images/brand/agent-4.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_5.html"><img src="/images/brand/agent-5.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_6.html"><img src="/images/brand/agent-6.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_8.html"><img src="/images/brand/agent-8.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_9.html"><img src="/images/brand/agent-9.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_10.html"><img src="/images/brand/agent-10.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_11.html"><img src="/images/brand/agent-11.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_12.html"><img src="/images/brand/agent-12.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_13.html"><img src="/images/brand/agent-13.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_14.html"><img src="/images/brand/agent-14.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_16.html"><img src="/images/brand/agent-16.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_17.html"><img src="/images/brand/agent-17.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_18.html"><img src="/images/brand/agent-18.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_19.html"><img src="/images/brand/agent-19.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_21.html"><img src="/images/brand/agent-21.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_22.html"><img src="/images/brand/agent-22.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_24.html"><img src="/images/brand/agent-24.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_26.html"><img src="/images/brand/agent-26.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_27.html"><img src="/images/brand/agent-27.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_30.html"><img src="/images/brand/agent-30.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_31.html"><img src="/images/brand/agent-31.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_32.html"><img src="/images/brand/agent-32.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_33.html"><img src="/images/brand/agent-33.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_34.html"><img src="/images/brand/agent-34.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_37.html"><img src="/images/brand/agent-37.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_38.html"><img src="/images/brand/agent-38.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_39.html"><img src="/images/brand/agent-39.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_40.html"><img src="/images/brand/agent-40.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_41.html"><img src="/images/brand/agent-41.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_42.html"><img src="/images/brand/agent-42.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_43.html"><img src="/images/brand/agent-43.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_44.html"><img src="/images/brand/agent-44.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_45.html"><img src="/images/brand/agent-45.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_46.html"><img src="/images/brand/agent-46.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_47.html"><img src="/images/brand/agent-47.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_48.html"><img src="/images/brand/agent-48.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_49.html"><img src="/images/brand/agent-49.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-4 brand_box"><a class="brand" href="/brand/franchise_51.html"><img src="/images/brand/agent-51.png" alt=""></a></div>
           </div>
         </section>
       </div>
-      <div id="video_modal" tavindex="-1" role="dialog" class="modal fade">
-        <div role="document" class="modal-dialog">
-          <div style="background: transparent; border: 0; width: 100%;" class="modal-content">
-            <div style="border: 0;" class="modal-header">
-              <button type="button" data-dismiss="modal" aria-label="close" style="color: #fff; opacity: 1" class="close closeVideo"><span aria-hidden="true" style="position: relative; right: -15px; top: -10px;">&times;</span></button>
+      <div class="modal fade" id="video_modal" tavindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content" style="background: transparent; border: 0; width: 100%">
+            <div class="modal-header" style="border: 0">
+              <button class="close closeVideo" type="button" data-dismiss="modal" aria-label="close" style="color: #fff; opacity: 1"><i class="fa fa-times" aria-hidden="true" style="position: relative; right: -15px; top: -10px"></i></button>
               <div class="modal-body">
                 <video width="100%" controls id="videoCpntainer">
                   <source src="images/video/vanish.mp4" type="video/mp4">
@@ -242,8 +239,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <nav class="nav-inline"><a href="mailto:service@thl.com.tw" class="nav-link"> <i aria-hidden="true" class="fa fa-chevron-right"></i><span>合作提案</span></a><a href="/factory.html" class="nav-link"> <i aria-hidden="true" class="fa fa-chevron-right"></i><span>廠商專區</span></a><a href="/recruiting.html" class="nav-link"><i aria-hidden="true" class="fa fa-chevron-right"></i><span>菁英招募</span></a>
-            </nav>
+            <nav class="nav-inline"><a class="nav-link" href="mailto:service@thl.com.tw"> <i class="fa fa-chevron-right" aria-hidden="true"></i><span>合作提案</span></a><a class="nav-link" href="/factory.html"> <i class="fa fa-chevron-right" aria-hidden="true"></i><span>廠商專區</span></a><a class="nav-link" href="/recruiting.html"><i class="fa fa-chevron-right" aria-hidden="true"></i><span>菁英招募</span></a></nav>
           </div>
           <div class="col-lg-6">
             <p class="copyright"><span>欣臨企業股份有限公司</span><span>版權所有&#169;2017 THL All rights reserved.</span></p>
@@ -251,12 +247,12 @@
         </div>
       </div>
     </footer>
-    <div id="contact_modal" tavindex="-1" role="dialog" aria-labelledby="contactByMail" aria-hidden="true" class="modal fade">
-      <div role="document" class="modal-dialog">
+    <div class="modal fade" id="contact_modal" tavindex="-1" role="dialog" aria-labelledby="contactByMail" aria-hidden="true">
+      <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" data-dismiss="modal" aria-label="close" class="close"><span aria-hidden="true">&times;</span></button>
-            <h4 id="contactByMail" class="modal-title">與我們聯絡</h4>
+            <button class="close" type="button" data-dismiss="modal" aria-label="close"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <h4 class="modal-title" id="contactByMail">與我們聯絡</h4>
             <div class="modal-body">
               <p class="para">欣臨企業於台北、台中、高雄皆設有公司據點，歡迎您直接與我們聯絡，或在在線上留下您的寶貴的建議，欣臨將會於24小時內與您聯絡！謝謝</p>
               <ul class="list">
@@ -267,8 +263,7 @@
                 <li>傳真：(02)2517-0292 、 (02) 2506-0750</li>
               </ul>
             </div>
-            <div class="modal-footer"><a href="mailto:service@thl.com.tw" class="btn btn-primary">寄信詢問</a>
-            </div>
+            <div class="modal-footer"><a class="btn btn-primary" href="mailto:service@thl.com.tw">寄信詢問</a></div>
           </div>
         </div>
       </div>
