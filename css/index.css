@@ -6997,3 +6997,33 @@ body {
     width: 24px;
   }
 }
+
+.playBtnCon {
+  position: relative;
+}
+.playBtnCon .playBtn {
+  height: 48px;
+  width: 48px;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.3);
+}
+.playBtnCon .playBtn:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 18px solid #fff;
+  display: block;
+  position: relative;
+  left: 16px;
+  top: 7px;
+}
