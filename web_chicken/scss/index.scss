@@ -1,0 +1,126 @@
+body {
+	background: #e6ddd9;
+	min-width: 1280px;
+	.container {
+		width: 1080px + 20px;
+		padding: 0;
+	}
+}
+header {
+	height: 60px;
+	position: absolute;
+	width: 100%;
+	z-index: 99;
+	.logos {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.logo {
+		display: block;	
+		padding-top: 13px;
+	}
+}
+main {
+	.main-visual {
+		position: relative;
+		margin-bottom: 80px;
+		.carousel {
+			.slick-dots {
+				bottom: 10px;
+				button {
+					$size: 16px;
+					height: $size;
+					width:  $size;
+					border: 1px solid #806239;
+					background: #fff;
+					border-radius: 50%;
+					&:before {
+						content: '';
+					}
+				}
+				.slick-active {
+					button {
+						background: #806239;
+						border-color: 806239;
+					}
+				}
+			}
+		}
+		.text {
+			width: 1100px;
+			margin: auto;
+			img {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+			}
+		}
+	}
+	.section {
+		.section_header {
+			margin: auto;
+			text-align: center;
+			margin-bottom: 40px;
+		}
+		.image {
+			margin-top: 50px;
+		}
+		&.inline {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	.certificate {
+		width: 530px;
+		figcaption {
+			padding-top: 10px;
+			font-size: 14px;
+			color: #4d4d4d;
+		}
+		.slick-slide img {
+			width: 100%;
+		}
+		.slick-dots {
+			bottom: 10px;
+			text-align: right;
+			button {
+				$size: 16px;
+				height: $size;
+				width:  $size;
+				border: 1px solid #806239;
+				background: #fff;
+				border-radius: 50%;
+				&:before {
+					content: '';
+				}
+			}
+			.slick-active {
+				button {
+					background: #806239;
+					border-color: 806239;
+				}
+			}
+		}
+	}
+	.buyer {
+		background: #fff;
+		padding-top: 60px;
+		padding-bottom: 100px;
+		.items {
+			display: flex;
+   			flex-flow: wrap row;
+			justify-content: space-between;
+			.pro {
+				display: block;
+				margin-bottom: 30px;
+				transition: all .28s ease-in;
+				&:hover {
+					opacity: .7;
+				}
+			}
+		}
+	}
+}
+footer {}

@@ -1,0 +1,65 @@
+extends ./_layout.jade
+
+block p_title
+	title 珍苑
+block extra_style
+	link(rel="stylesheet", href="slick-master/slick/slick.css")
+	link(rel="stylesheet", href="slick-master/slick/slick-theme.css")
+block main_content
+	.main-visual
+		.container-fluid
+			.carousel
+				a(href="#buyer")
+					img(src="images/XMLID_1888_.png", alt="")
+				a(href="#buyer")
+					img(src="images/XMLID_42_.png", alt="")
+			.text
+				a.line.effect(href="http://www.jnyfood.com.tw/v2/official" target="_blank")
+					img(src="images/XMLID_1469_.png", alt="")
+				.line
+					img(src="images/XMLID_6_.png", alt="")
+	.container
+		section.section
+			figure
+				img(src="images/XMLID_1734_.png", alt="")
+			figure
+				img(src="images/XMLID_1171_.png", alt="")
+			figure
+				img(src="images/XMLID_1255_.png", alt="")
+		section.section
+			.section_header
+				img(src="images/XMLID_19_.png", alt="")
+			figure
+				img(src="images/XMLID_1256_.png", alt="")
+			figure
+				img(src="images/XMLID_1736_.png", alt="")
+		section.section
+			figure
+				img(src="images/XMLID_2103_.png", alt="")
+	.container-fluid.buyer#buyer
+		section.section
+			.section_header
+				img(src="images/XMLID_25_.png", alt="")
+		.container
+			.items
+				a.pro(href="https://www.famicloud.com.tw/Branchs/Branch/Product/312/313/316/5303" target="_blank")
+					figure.intro
+						img(src="images/XMLID_2105_.png", alt="")
+					.btn 立刻下單
+				a.pro(href="https://www.famicloud.com.tw/Branchs/Branch/Product/4/107/808/4357" target="_blank")
+					figure.intro
+						img(src="images/XMLID_2104_.png", alt="")
+					.btn 立刻下單
+
+
+block extra_script
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.min.js')
+	script(src='slick-master/slick/slick.js')
+	script.
+		$('.carousel').slick({
+			infinate: true,
+			dots:  true,
+			arrows: false,
+			autoplay: true,
+			autoplaySpeed: 3000,
+		});
